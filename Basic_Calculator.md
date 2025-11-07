@@ -2,7 +2,7 @@
 
 ## Page Under Test  
 **Basic Calculator – TestSheepNZ**  
-URL: [https://testsheepnz.github.io/BasicCalculator.html](https://testsheepnz.github.io/BasicCalculator.html) :contentReference[oaicite:1]{index=1}
+URL: [https://testsheepnz.github.io/BasicCalculator.html](https://testsheepnz.github.io/BasicCalculator.html) 
 
 ---
 
