@@ -3,7 +3,7 @@
 This document contains detailed manual test cases for the **ParaBank Registration Page**  
 URL: [https://parabank.parasoft.com/parabank/register.htm](https://parabank.parasoft.com/parabank/register.htm)
 
-The objective of this test suite is to validate all user registration functionalities, field-level validations, and system responses under different scenarios — both positive and negative.
+The objective of this test suite is to validate all user registration functionalities, field-level validations, and system responses under different scenarios, both positive and negative.
 
 ---
 
@@ -86,4 +86,4 @@ The objective of this test suite is to validate all user registration functional
 This suite covers full validation of the ParaBank Registration module.  
 It ensures that the form supports correct user input, prevents invalid registration, and handles usability and security aspects effectively.  
 
-All test cases conform to the standardized structure used in this repository — ensuring consistency, readability, and easy tracking in Excel or any test management tool.
+All test cases conform to the standardized structure used in this repository, ensuring consistency, readability, and easy tracking in Excel or any test management tool.
