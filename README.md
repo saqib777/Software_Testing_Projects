@@ -89,4 +89,4 @@ Feel free to fork the repository, open an issue, or submit a pull request.
 
 ## Author
 
-Mohammed Saqib — Focused on learning Software Testing, Test Design, and Automation through hands‑on practice and open‑source collaboration.
+Mohammed Saqib - Focused on learning Software Testing, Test Design, and Automation through hands‑on practice and open‑source collaboration.
