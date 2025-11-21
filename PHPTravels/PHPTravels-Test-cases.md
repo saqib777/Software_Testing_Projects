@@ -13,7 +13,7 @@ All test cases follow the user’s standard table structure (Sl. No., DATE, Appl
 | 1                                                    |      | PHPTRAVELS  | GM-001       | Homepage loads   | General/UI       | 1             | Open site URL        | Open URL | Browser               | [https://phptravels.com](https://phptravels.com) | Homepage loads fully     |               |        |       |              |
 | 2                                                    |      | PHPTRAVELS  | GM-002       | Navigation links | General/UI       | 1             | Click each menu item | Click    | Header menu           | Flights/Hotels/Tours/Cars                        | Correct pages open       |               |        |       |              |
 | 3                                                    |      | PHPTRAVELS  | GM-003       | Footer links     | General/UI       | 1             | Click footer links   | Click    | Footer area           | Terms/Privacy/Support                            | Links open without error |               |        |       |              |
-| (You can expand rows as needed in your Excel sheet.) |      |             |              |                  |                  |               |                      |          |                       |                                                  |                          |               |        |       |              |
+
 
 * Homepage loads successfully
 * Header navigation links work (Flights, Hotels, Tours, Cars)
@@ -200,5 +200,4 @@ Sl. No. | DATE | Application | Test Case ID | Test Case Name | Module / Feature 
 
 ---
 
-If you want, I can now **populate this entire suite into full table rows** (100–200 rows) or split it module‑wise into separate containers.
 
