@@ -159,3 +159,51 @@ TC-ACCESS-002: Verify Screen Reader Support
 - Steps: Use screen reader on product listing page.
 - Expected: Product titles, prices, and buttons announced correctly.
 - Risks: Missing or incorrect ARIA labels.
+
+TC-SEC-001: Validate HTTPS Enforcement
+- Purpose: Ensure secure communication.
+- Steps: Access site via http://.
+- Expected: Automatic redirect to https://.
+- Risks: Data exposed if insecure connection allowed.
+
+TC-SEC-002: Input Sanitization
+- Purpose: Prevent XSS attacks.
+- Steps: Enter "<script>alert(1)</script>" in search bar.
+- Expected: Input rejected or escaped; no script execution.
+- Risks: Vulnerability to malicious input.
+
+TC-SEC-003: Session Handling
+- Purpose: Validate session management.
+- Steps: Log in, clear cookies, revisit site.
+- Expected: Session invalidated; requires re-login.
+- Risks: Unauthorized access if session persists.
+
+TC-COMP-001: Browser Compatibility
+- Purpose: Ensure consistent rendering across browsers.
+- Steps: Open site in Chrome, Firefox, Safari.
+- Expected: Site renders consistently.
+- Risks: Layout or functionality issues in certain browsers.
+
+TC-COMP-002: Device Compatibility
+- Purpose: Validate cross-device performance.
+- Steps: Open site on mobile, tablet, desktop.
+- Expected: Site renders consistently.
+- Risks: Poor mobile optimization.
+
+TC-USAB-001: Verify Error Messages Clarity
+- Purpose: Ensure user-friendly error handling.
+- Steps: Trigger invalid input in checkout form.
+- Expected: Clear error messages guiding correction.
+- Risks: Confusing or missing error messages.
+
+TC-USAB-002: Verify Cart Usability
+- Purpose: Confirm cart remains manageable with multiple items.
+- Steps: Add multiple items, update quantities.
+- Expected: Totals update correctly; cart easy to manage.
+- Risks: Errors in totals or poor usability.
+
+TC-USAB-003: Verify Checkout Flow Usability
+- Purpose: Validate checkout flow intuitiveness.
+- Steps: Proceed through checkout steps.
+- Expected: Flow is intuitive, minimal steps, clear guidance.
+- Risks: User confusion or abandoned checkout.
