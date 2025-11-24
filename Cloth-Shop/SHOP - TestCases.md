@@ -104,3 +104,51 @@ TC-UI-001: Verify Responsive Layout
 - Steps: Resize browser window to mobile/tablet/desktop.
 - Expected: Layout adapts (grid collapses, menu adapts).
 - Risks: Poor responsiveness on certain screen sizes.
+
+- TC-SEARCH-001: Verify Product Search
+- Purpose: Ensure search functionality filters products correctly.
+- Steps: Enter keyword "Shoes" in search bar.
+- Expected: Product listing updates to show only relevant items.
+- Risks: Search may return incorrect or no results.
+
+TC-FILTER-001: Verify Category Filter
+- Purpose: Validate category filter functionality.
+- Steps: Select "Men’s Clothing" from category dropdown.
+- Expected: Product listing updates to show only items in selected category.
+- Risks: Incorrect filtering or empty results.
+
+TC-FILTER-002: Verify Price Filter
+- Purpose: Confirm price filter works correctly.
+- Steps: Apply price range $10–$50.
+- Expected: Product listing updates to show only items within range.
+- Risks: Items outside range may appear.
+
+TC-CHECK-003: Validate Checkout Form Fields
+- Purpose: Ensure checkout form validates email format.
+- Steps: Enter invalid email "abc@xyz".
+- Expected: Error message displayed for invalid email.
+- Risks: Form may accept invalid data.
+
+TC-CHECK-004: Validate Mandatory Fields
+- Purpose: Confirm mandatory fields are enforced.
+- Steps: Leave address field blank.
+- Expected: Error message prompts user to fill mandatory field.
+- Risks: Checkout may proceed with incomplete data.
+
+TC-PERF-001: Verify Page Load Performance
+- Purpose: Measure performance of product listing page.
+- Steps: Navigate to /list and record load time.
+- Expected: Page loads within 3 seconds.
+- Risks: Slow performance impacting user experience.
+
+TC-ACCESS-001: Verify Accessibility Features
+- Purpose: Ensure site is usable via keyboard navigation.
+- Steps: Use Tab/Enter keys to navigate.
+- Expected: All interactive elements accessible via keyboard.
+- Risks: Elements not reachable or focus not visible.
+
+TC-ACCESS-002: Verify Screen Reader Support
+- Purpose: Validate accessibility for visually impaired users.
+- Steps: Use screen reader on product listing page.
+- Expected: Product titles, prices, and buttons announced correctly.
+- Risks: Missing or incorrect ARIA labels.
