@@ -277,3 +277,45 @@ TC-EXPL-002: Exploratory: Browser Back/Forward
 - Steps: Use browser back/forward repeatedly.
 - Expected: State preserved; cart not lost.
 - Risks: State reset, lost cart items.
+
+TC-INT-001: Product API Integration
+- Purpose: Ensure product listing page correctly consumes API data.
+- Steps: Load product listing page.
+- Expected: Product grid populated with API response.
+- Risks: Empty or incorrect product data if API fails.
+
+TC-INT-002: Cart API Integration
+- Purpose: Validate cart updates via API.
+- Steps: Add product to cart.
+- Expected: Cart updates correctly; API response matches UI.
+- Risks: UI and API mismatch.
+
+TC-INT-003: Checkout API Integration
+- Purpose: Confirm checkout flow interacts with API.
+- Steps: Proceed to checkout.
+- Expected: Checkout page loads; API confirms order creation.
+- Risks: API failure, incomplete checkout.
+
+TC-INT-004: Data Persistence in Cart
+- Purpose: Ensure cart state persists across refresh.
+- Steps: Add items, refresh page.
+- Expected: Cart retains items.
+- Risks: Cart reset or lost data.
+
+TC-INT-005: Component Communication
+- Purpose: Validate UI components communicate correctly.
+- Steps: Add item, check cart icon.
+- Expected: Cart icon updates immediately.
+- Risks: Delayed or missing updates.
+
+TC-INT-006: Error Handling in API Calls
+- Purpose: Ensure graceful handling of API errors.
+- Steps: Simulate API failure (500 error).
+- Expected: UI shows error message; no crash.
+- Risks: Blank page or crash.
+
+TC-INT-007: Cross‑Module Integration
+- Purpose: Validate end‑to‑end flow across modules.
+- Steps: Add item, navigate to checkout.
+- Expected: Item flows correctly from product → cart → checkout.
+- Risks: Item lost between modules.
