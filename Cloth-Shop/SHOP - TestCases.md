@@ -215,3 +215,57 @@ TC-USAB-003: Verify Checkout Flow Usability
 - Steps: Proceed through checkout steps.
 - Expected: Flow is intuitive, minimal steps, clear guidance.
 - Risks: User confusion or abandoned checkout.
+
+TC-STRESS-001: Stress Test: Add 100 Items
+- Purpose: Validate cart stability under heavy load.
+- Steps: Add 100 items to cart.
+- Expected: Cart handles volume without crashing; totals correct.
+- Risks: Performance degradation, overflow errors.
+
+TC-STRESS-002: Stress Test: Rapid Add/Remove
+- Purpose: Test cart under rapid state changes.
+- Steps: Add and remove items quickly in succession.
+- Expected: Cart remains stable; no corruption.
+- Risks: Race conditions, inconsistent state.
+
+TC-CONC-001: Concurrency: Multiple Tabs
+- Purpose: Validate cart consistency across tabs.
+- Steps: Open cart in two tabs, update quantities differently.
+- Expected: Cart state remains consistent.
+- Risks: Conflicting updates, stale data.
+
+TC-CONC-002: Concurrency: Multi-User Access
+- Purpose: Ensure user isolation.
+- Steps: Simulate two users adding items.
+- Expected: Each user’s cart isolated; no leakage.
+- Risks: Shared state between users.
+
+TC-EDGE-001: Edge Case: Large Quantity Input
+- Purpose: Test system limits.
+- Steps: Enter quantity = 9999.
+- Expected: System caps or handles gracefully.
+- Risks: Overflow, crash.
+
+TC-EDGE-002: Edge Case: Special Characters
+- Purpose: Validate input sanitization.
+- Steps: Enter "!@#$%^&*" in search bar.
+- Expected: Input rejected or ignored; no crash.
+- Risks: Injection vulnerabilities.
+
+TC-EDGE-003: Edge Case: Empty Search
+- Purpose: Confirm default behavior.
+- Steps: Leave search bar empty, press enter.
+- Expected: Default product listing shown.
+- Risks: Error or blank page.
+
+TC-EXPL-001: Exploratory: Random Navigation
+- Purpose: Discover hidden issues.
+- Steps: Navigate randomly between pages.
+- Expected: Site stable; no broken routes.
+- Risks: Routing errors, crashes.
+
+TC-EXPL-002: Exploratory: Browser Back/Forward
+- Purpose: Validate navigation state handling.
+- Steps: Use browser back/forward repeatedly.
+- Expected: State preserved; cart not lost.
+- Risks: State reset, lost cart items.
