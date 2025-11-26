@@ -1,13 +1,13 @@
-# BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS 
+# BASIC CALCULATOR TEST SUITE - DETAILED EXPLANATIONS 
 
 
-# **SECTION 1 — BASIC ARITHMETIC OPERATIONS**
+# **SECTION 1 - BASIC ARITHMETIC OPERATIONS**
 
 These tests verify that the four fundamental calculator operations behave exactly as they should. Although they look simple on the surface, these tests ensure the entire computational engine is behaving reliably.
 
 ---
 
-## **TEST 1 — Addition of Two Positive Integers**
+## **TEST 1 - Addition of Two Positive Integers**
 
 **Purpose:** To confirm the calculator performs correct addition when both numbers are positive whole numbers.
 
@@ -15,7 +15,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 2 — Addition of Two Negative Integers**
+## **TEST 2 - Addition of Two Negative Integers**
 
 **Purpose:** Verify the calculator correctly interprets the minus sign when used as a negative indicator, not an operator.
 
@@ -23,7 +23,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 3 — Addition with Zero**
+## **TEST 3 - Addition with Zero**
 
 **Purpose:** Confirm that adding zero never alters the other value.
 
@@ -31,7 +31,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 4 — Subtraction of Two Positive Numbers**
+## **TEST 4 - Subtraction of Two Positive Numbers**
 
 **Purpose:** Validate the accuracy of basic subtraction.
 
@@ -39,7 +39,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 5 — Subtraction Producing Negative Result**
+## **TEST 5 - Subtraction Producing Negative Result**
 
 **Purpose:** Verify output formatting when result is negative.
 
@@ -47,7 +47,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 6 — Multiplication of Positive Integers**
+## **TEST 6 - Multiplication of Positive Integers**
 
 **Purpose:** Validate multiplication logic.
 
@@ -55,7 +55,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 7 — Multiplication Involving Zero**
+## **TEST 7 - Multiplication Involving Zero**
 
 **Purpose:** Ensure any number multiplied by zero results in zero.
 
@@ -63,7 +63,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 8 — Division of Two Positive Integers**
+## **TEST 8 - Division of Two Positive Integers**
 
 **Purpose:** Confirm division logic is working.
 
@@ -71,7 +71,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 9 — Division Resulting in Decimal Output**
+## **TEST 9 - Division Resulting in Decimal Output**
 
 **Purpose:** Validate decimal formatting when division results in non-whole numbers.
 
@@ -79,7 +79,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 10 — Negative Number Arithmetic (Mixed Signs)**
+## **TEST 10 - Negative Number Arithmetic (Mixed Signs)**
 
 **Purpose:** Validate handling of mixed-sign operations.
 
@@ -87,7 +87,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 11 — Decimal Addition**
+## **TEST 11 - Decimal Addition**
 
 **Purpose:** Ensure decimals are added with correct precision.
 
@@ -95,7 +95,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 12 — Decimal Subtraction**
+## **TEST 12 - Decimal Subtraction**
 
 **Purpose:** Verify subtracting decimal numbers yields an accurate decimal result.
 
@@ -103,7 +103,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 13 — Decimal Multiplication**
+## **TEST 13 - Decimal Multiplication**
 
 **Purpose:** Validate that multiplying decimals does not distort the decimal placement.
 
@@ -111,7 +111,7 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-## **TEST 14 — Decimal Division**
+## **TEST 14 - Decimal Division**
 
 **Purpose:** Confirm decimal division precision.
 
@@ -119,13 +119,13 @@ These tests verify that the four fundamental calculator operations behave exactl
 
 ---
 
-# **SECTION 2 — OPERATOR PRECEDENCE & PARENTHESES**
+# **SECTION 2 - OPERATOR PRECEDENCE & PARENTHESES**
 
 These tests ensure the calculator evaluates expressions the way real mathematics requires.
 
 ---
 
-## **TEST 15 — Precedence: Multiplication Before Addition**
+## **TEST 15 - Precedence: Multiplication Before Addition**
 
 **Purpose:** Validate that `2 + 3 × 4` yields `14`.
 
@@ -133,7 +133,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 16 — Precedence: Division Before Addition**
+## **TEST 16 - Precedence: Division Before Addition**
 
 **Purpose:** Verify division comes before addition.
 
@@ -141,7 +141,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 17 — Simple Parentheses Handling**
+## **TEST 17 - Simple Parentheses Handling**
 
 **Purpose:** Ensure parentheses override precedence.
 
@@ -149,7 +149,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 18 — Nested Parentheses**
+## **TEST 18 - Nested Parentheses**
 
 **Purpose:** Confirm support for multi-level grouping.
 
@@ -157,7 +157,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 19 — Parentheses with Mixed Operators**
+## **TEST 19 - Parentheses with Mixed Operators**
 
 **Purpose:** Test prioritization with multiple nested operations.
 
@@ -165,7 +165,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 20 — Parentheses Around Negative Numbers**
+## **TEST 20 - Parentheses Around Negative Numbers**
 
 **Purpose:** Confirm negative numbers inside parentheses are parsed correctly.
 
@@ -173,7 +173,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 21 — Parentheses Containing Decimals**
+## **TEST 21 - Parentheses Containing Decimals**
 
 **Purpose:** Ensure decimal values inside parentheses are handled cleanly.
 
@@ -181,7 +181,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 22 — Misplaced Parenthesis Detection**
+## **TEST 22 - Misplaced Parenthesis Detection**
 
 **Purpose:** Ensure invalid placement of parentheses triggers an error.
 
@@ -189,7 +189,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 23 — Missing Closing Parenthesis**
+## **TEST 23 - Missing Closing Parenthesis**
 
 **Purpose:** Detect incomplete expressions.
 
@@ -197,7 +197,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 24 — Multiple Levels of Precedence**
+## **TEST 24 - Multiple Levels of Precedence**
 
 **Purpose:** Validate complex but valid expressions.
 
@@ -205,7 +205,7 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-## **TEST 25 — Parentheses with Sequential Operations**
+## **TEST 25 - Parentheses with Sequential Operations**
 
 **Purpose:** Ensure chain calculations and parentheses interact properly.
 
@@ -214,13 +214,13 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 ---
 
 
-# **SECTION 3 — INPUT VALIDATION TESTS**
+# **SECTION 3 - INPUT VALIDATION TESTS**
 
 Input validation tests ensure the calculator only accepts valid numeric and operator input. This prevents errors, crashes, and undefined behavior.
 
 ---
 
-## **TEST 26 — Reject Alphabetic Input (Single Character)**
+## **TEST 26 - Reject Alphabetic Input (Single Character)**
 
 **Purpose:** Ensure typing letters like `a` does not appear in the display.
 
@@ -228,7 +228,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 27 — Reject Alphabetic Input (Multiple Characters)**
+## **TEST 27 - Reject Alphabetic Input (Multiple Characters)**
 
 **Purpose:** Validate that strings like `abc` are ignored entirely.
 
@@ -236,7 +236,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 28 — Reject Special Characters ($, @, #)**
+## **TEST 28 - Reject Special Characters ($, @, #)**
 
 **Purpose:** Confirm that non-numeric symbols are filtered.
 
@@ -244,7 +244,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 29 — Prevent Double Decimal Points**
+## **TEST 29 - Prevent Double Decimal Points**
 
 **Purpose:** Ensure users cannot enter something like `3.4.2`.
 
@@ -252,7 +252,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 30 — Reject Multiple Operators in a Row**
+## **TEST 30 - Reject Multiple Operators in a Row**
 
 **Purpose:** Ensure a sequence like `5 + × 3` is not allowed.
 
@@ -260,7 +260,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 31 — Handle Empty Input Gracefully**
+## **TEST 31 - Handle Empty Input Gracefully**
 
 **Purpose:** Ensure pressing `=` with no input does nothing harmful.
 
@@ -268,7 +268,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 32 — Reject Leading Operators (Except Unary Minus)**
+## **TEST 32 - Reject Leading Operators (Except Unary Minus)**
 
 **Purpose:** Prevent starting input with `+`, `×`, or `÷`.
 
@@ -276,7 +276,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 33 — Whitespace Handling for Pasted Input**
+## **TEST 33 - Whitespace Handling for Pasted Input**
 
 **Purpose:** Ensure spaces do not break numeric parsing.
 
@@ -284,7 +284,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 34 — Prevent Overflowing Input Length**
+## **TEST 34 - Prevent Overflowing Input Length**
 
 **Purpose:** Ensure users cannot enter more digits than allowed.
 
@@ -292,7 +292,7 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-## **TEST 35 — Detect Invalid Decimal Placement**
+## **TEST 35 - Detect Invalid Decimal Placement**
 
 **Purpose:** Prevent decimals before digits like `.5` if the calculator does not support it.
 
@@ -300,13 +300,13 @@ Input validation tests ensure the calculator only accepts valid numeric and oper
 
 ---
 
-# **SECTION 4 — ERROR HANDLING TESTS**
+# **SECTION 4 - ERROR HANDLING TESTS**
 
 These tests ensure the calculator does not crash or misbehave when encountering impossible or undefined operations.
 
 ---
 
-## **TEST 36 — Division by Zero Error Message**
+## **TEST 36 - Division by Zero Error Message**
 
 **Purpose:** Ensure dividing by zero (`6 ÷ 0`) shows a proper error.
 
@@ -314,7 +314,7 @@ These tests ensure the calculator does not crash or misbehave when encountering 
 
 ---
 
-## **TEST 37 — Handling Infinity (Overflow from Division)**
+## **TEST 37 - Handling Infinity (Overflow from Division)**
 
 **Purpose:** Validate how the calculator handles infinity.
 
@@ -322,7 +322,7 @@ These tests ensure the calculator does not crash or misbehave when encountering 
 
 ---
 
-## **TEST 38 — Overflow from Large Calculations**
+## **TEST 38 - Overflow from Large Calculations**
 
 **Purpose:** Ensure large outputs trigger error or formatting rules.
 
@@ -330,7 +330,7 @@ These tests ensure the calculator does not crash or misbehave when encountering 
 
 ---
 
-## **TEST 39 — Underflow with Tiny Decimal Results**
+## **TEST 39 - Underflow with Tiny Decimal Results**
 
 **Purpose:** Validate behavior when results are extremely small.
 
@@ -338,7 +338,7 @@ These tests ensure the calculator does not crash or misbehave when encountering 
 
 ---
 
-## **TEST 40 — Invalid Operation Sequence Error**
+## **TEST 40 - Invalid Operation Sequence Error**
 
 **Purpose:** Ensure invalid sequences like `+=` show an error.
 
@@ -346,13 +346,13 @@ These tests ensure the calculator does not crash or misbehave when encountering 
 
 ---
 
-# **SECTION 5 — CHAINED CALCULATIONS & EQUALS BEHAVIOR**
+# **SECTION 5 - CHAINED CALCULATIONS & EQUALS BEHAVIOR**
 
 These tests verify how the calculator behaves when users continue computing beyond a single `=` press.
 
 ---
 
-## **TEST 41 — Basic Chain: Continue After Equals**
+## **TEST 41 - Basic Chain: Continue After Equals**
 
 **Purpose:** Ensure continuing after a completed calculation works.
 
@@ -360,7 +360,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 42 — Repeated Equals Behavior**
+## **TEST 42 - Repeated Equals Behavior**
 
 **Purpose:** Verify pressing `=` repeatedly repeats the last operation.
 
@@ -368,7 +368,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 43 — Operator Switch After Equals**
+## **TEST 43 - Operator Switch After Equals**
 
 **Purpose:** Ensure switching operators after equals works.
 
@@ -376,7 +376,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 44 — Multi-step Mixed Chain**
+## **TEST 44 - Multi-step Mixed Chain**
 
 **Purpose:** Validate long sequence accuracy.
 
@@ -384,7 +384,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 45 — Chain with Decimals**
+## **TEST 45 - Chain with Decimals**
 
 **Purpose:** Check chaining accuracy with decimal numbers.
 
@@ -392,7 +392,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 46 — Clear Entry During Chain**
+## **TEST 46 - Clear Entry During Chain**
 
 **Purpose:** Test `CE` functionality in the middle of a chain.
 
@@ -400,7 +400,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 47 — Full Clear During Chain**
+## **TEST 47 - Full Clear During Chain**
 
 **Purpose:** Ensure pressing `C` resets the entire process.
 
@@ -408,7 +408,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 48 — Chain After Error State**
+## **TEST 48 - Chain After Error State**
 
 **Purpose:** Confirm calculations do not continue after an error until cleared.
 
@@ -416,7 +416,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 49 — Starting New Chain With Result as Operand**
+## **TEST 49 - Starting New Chain With Result as Operand**
 
 **Purpose:** Validate using a previous result as a new input.
 
@@ -424,7 +424,7 @@ These tests verify how the calculator behaves when users continue computing beyo
 
 ---
 
-## **TEST 50 — Chain with Negative Results**
+## **TEST 50 - Chain with Negative Results**
 
 **Purpose:** Test negative transition during chained operations.
 
@@ -439,14 +439,14 @@ Everything is explained gently, clearly, and in long detail so you fully underst
 
 ---
 
-# **SECTION 6 — UI BUTTONS, KEYBOARD INPUT & FOCUS BEHAVIOR**
+# **SECTION 6 - UI BUTTONS, KEYBOARD INPUT & FOCUS BEHAVIOR**
 
 The calculator is a highly interactive tool. Even if its arithmetic is perfect, a broken button, wrong event trigger, or misaligned keyboard mapping can ruin the experience.
 These tests ensure the UI itself is solid and predictable.
 
 ---
 
-## **TEST 51 — Numeric Button Click Response (Digit 0–9)**
+## **TEST 51 - Numeric Button Click Response (Digit 0–9)**
 
 **Purpose:** Ensure every digit button (0–9) enters the correct number on the display.
 
@@ -455,7 +455,7 @@ Although this feels obvious, it’s critical. Each digit button must send the ex
 
 ---
 
-## **TEST 52 — Operator Button Response (+, -, ×, ÷)**
+## **TEST 52 - Operator Button Response (+, -, ×, ÷)**
 
 **Purpose:** Verify that each operator button sets the correct operator state.
 
@@ -464,7 +464,7 @@ When a user presses `+`, the calculator must store the current number as the fir
 
 ---
 
-## **TEST 53 — Decimal Point Button Behavior**
+## **TEST 53 - Decimal Point Button Behavior**
 
 **Purpose:** Ensure pressing `.` inserts a decimal only when allowed.
 
@@ -473,16 +473,16 @@ The calculator must block multiple decimals inside a single number. This test en
 
 ---
 
-## **TEST 54 — Clear Button (C) Behavior**
+## **TEST 54 - Clear Button (C) Behavior**
 
 **Purpose:** Confirm `C` completely resets calculator state.
 
 **Explanation:**
-This tests whether all variables—first operand, second operand, operator, display text—reset instantly so the calculator starts fresh.
+This tests whether all variables-first operand, second operand, operator, display text-reset instantly so the calculator starts fresh.
 
 ---
 
-## **TEST 55 — Clear Entry (CE) Behavior**
+## **TEST 55 - Clear Entry (CE) Behavior**
 
 **Purpose:** Ensure CE only clears the current input, not the entire operation.
 
@@ -491,7 +491,7 @@ If the user is midway through `5 + 7`, CE should clear only the `7`, not the ent
 
 ---
 
-## **TEST 56 — Equals Button Visual and Functional Response**
+## **TEST 56 - Equals Button Visual and Functional Response**
 
 **Purpose:** Verify that pressing `=` triggers immediate calculation.
 
@@ -500,7 +500,7 @@ This checks both function and UI feedback, confirming that the button click fire
 
 ---
 
-## **TEST 57 — Button Press Animation/Feedback**
+## **TEST 57 - Button Press Animation/Feedback**
 
 **Purpose:** Ensure every button provides visible/ tactile feedback.
 
@@ -509,7 +509,7 @@ This ensures users see that a button was successfully pressed. It helps detect U
 
 ---
 
-## **TEST 58 — Keyboard Input for Digits**
+## **TEST 58 - Keyboard Input for Digits**
 
 **Purpose:** Validate that typing numbers on the keyboard mirrors button behavior.
 
@@ -518,7 +518,7 @@ Many users prefer typing instead of clicking. This test ensures keyboard events 
 
 ---
 
-## **TEST 59 — Keyboard Input for Operators**
+## **TEST 59 - Keyboard Input for Operators**
 
 **Purpose:** Confirm pressing `+`, `-`, `*`, `/` on the keyboard works like button presses.
 
@@ -527,7 +527,7 @@ The test ensures mapping rules (like `*` → multiply, `/` → divide) are corre
 
 ---
 
-## **TEST 60 — Backspace Key Functionality**
+## **TEST 60 - Backspace Key Functionality**
 
 **Purpose:** Ensure users can delete the last entered digit.
 
@@ -536,7 +536,7 @@ This helps correct mistakes without clearing entire expressions. The test confir
 
 ---
 
-## **TEST 61 — Tab Focus Order**
+## **TEST 61 - Tab Focus Order**
 
 **Purpose:** Validate the movement between buttons using Tab.
 
@@ -545,7 +545,7 @@ The calculator’s tab order must match visual layout so keyboard-only users can
 
 ---
 
-## **TEST 62 — Enter Key Performs Equals Action**
+## **TEST 62 - Enter Key Performs Equals Action**
 
 **Purpose:** Ensure pressing Enter calculates the result.
 
@@ -554,14 +554,14 @@ This is expected behavior for most calculators and improves accessibility.
 
 ---
 
-# **SECTION 7 — DECIMAL PRECISION & ROUNDING TESTS**
+# **SECTION 7 - DECIMAL PRECISION & ROUNDING TESTS**
 
 These tests focus on how the calculator handles tricky decimal arithmetic.
 Floating‑point numbers naturally introduce precision issues, so the calculator must deliberately format and round results.
 
 ---
 
-## **TEST 63 — Decimal Precision: 0.1 + 0.2 Example**
+## **TEST 63 - Decimal Precision: 0.1 + 0.2 Example**
 
 **Purpose:** Validate correct handling of known floating‑point pitfalls.
 
@@ -571,7 +571,7 @@ The calculator must apply rounding before displaying the result.
 
 ---
 
-## **TEST 64 — Maximum Decimal Places Allowed**
+## **TEST 64 - Maximum Decimal Places Allowed**
 
 **Purpose:** Ensure the calculator enforces a defined precision limit.
 
@@ -580,7 +580,7 @@ If the limit is 10 decimal places, typing beyond that should not be allowed. Thi
 
 ---
 
-## **TEST 65 — Rounding on Long Decimal Results**
+## **TEST 65 - Rounding on Long Decimal Results**
 
 **Purpose:** Confirm long decimals like `1 ÷ 3` produce properly rounded values.
 
@@ -589,7 +589,7 @@ The test ensures the result doesn’t print endless digits but displays somethin
 
 ---
 
-## **TEST 66 — Removing Unnecessary Trailing Zeros**
+## **TEST 66 - Removing Unnecessary Trailing Zeros**
 
 **Purpose:** Ensure results like `2.5000` render as `2.5`.
 
@@ -598,7 +598,7 @@ This improves visual clarity and ensures results are presented neatly.
 
 ---
 
-## **TEST 67 — Consistent Rounding Mode**
+## **TEST 67 - Consistent Rounding Mode**
 
 **Purpose:** Verify the rounding mode (e.g., half‑up, banker's rounding).
 
@@ -607,7 +607,7 @@ All rounding must follow one consistent rule. This test confirms whether roundin
 
 ---
 
-## **TEST 68 — Scientific Notation Trigger Threshold**
+## **TEST 68 - Scientific Notation Trigger Threshold**
 
 **Purpose:** Ensure very large or tiny results switch to exponential format correctly.
 
@@ -616,7 +616,7 @@ If `999999999 × 999999999` exceeds the display limit, the result should become 
 
 ---
 
-## **TEST 69 — Decimal Subtraction Precision**
+## **TEST 69 - Decimal Subtraction Precision**
 
 **Purpose:** Validate subtraction such as `7.5 - 2.25` holds correct place values.
 
@@ -625,7 +625,7 @@ Decimal subtraction requires precise digit alignment. The test ensures no roundi
 
 ---
 
-## **TEST 70 — Decimal Multiplication Precision**
+## **TEST 70 - Decimal Multiplication Precision**
 
 **Purpose:** Check whether multiplying decimals respects decimal places.
 
@@ -634,13 +634,13 @@ Example: `2.5 × 0.4 = 1.0`. The calculator should show `1` or `1.0` depending o
 
 ---
 
-# **SECTION 8 — LOCALE & NUMBER FORMATTING TESTS**
+# **SECTION 8 - LOCALE & NUMBER FORMATTING TESTS**
 
 Different users use different number formats. Calculators must adapt to punctuation styles and grouping rules of the region.
 
 ---
 
-## **TEST 71 — US Locale Formatting (1,234.56)**
+## **TEST 71 - US Locale Formatting (1,234.56)**
 
 **Purpose:** Validate comma as thousand separator and dot as decimal.
 
@@ -649,7 +649,7 @@ This ensures numbers display naturally for users in the U.S.
 
 ---
 
-## **TEST 72 — EU Locale Formatting (1.234,56)**
+## **TEST 72 - EU Locale Formatting (1.234,56)**
 
 **Purpose:** Confirm dot becomes thousand separator and comma becomes decimal.
 
@@ -658,7 +658,7 @@ Here, typing `,` must create a decimal, not a separator. This tests locale‑awa
 
 ---
 
-## **TEST 73 — Switching Locales Mid‑Session**
+## **TEST 73 - Switching Locales Mid‑Session**
 
 **Purpose:** Ensure formatting adjusts immediately when locale setting is changed.
 
@@ -667,7 +667,7 @@ If a user switches device locale, the calculator must immediately reformat the e
 
 ---
 
-## **TEST 74 — Accepting Locale‑Specific Input (Comma Decimal)**
+## **TEST 74 - Accepting Locale‑Specific Input (Comma Decimal)**
 
 **Purpose:** Validate entering a comma as a decimal works for EU users.
 
@@ -676,7 +676,7 @@ Typing `3,5` should register as `3.5` internally.
 
 ---
 
-## **TEST 75 — Grouping Separator Handling in Input**
+## **TEST 75 - Grouping Separator Handling in Input**
 
 **Purpose:** Ensure the calculator properly handles numbers like `1,000` during input.
 
