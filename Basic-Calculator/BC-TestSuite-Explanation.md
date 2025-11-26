@@ -216,6 +216,230 @@ These tests ensure the calculator evaluates expressions the way real mathematics
 
 ---
 
-# END OF PART 1
+# BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS (PART 2: TESTS 26–50)
 
-Part 2 (Tests 26–50) will be prepared in the next container when requested.
+Below are the next **25 test suite explanations**, continuing from the previous document. These cover input validation, error handling, chained operations, equals behavior, and early UI functionality. Each explanation is long, simple, and deeply detailed so you fully understand the purpose of each test.
+
+---
+
+# **SECTION 3 — INPUT VALIDATION TESTS**
+
+Input validation tests ensure the calculator only accepts valid numeric and operator input. This prevents errors, crashes, and undefined behavior.
+
+---
+
+## **TEST 26 — Reject Alphabetic Input (Single Character)**
+
+**Purpose:** Ensure typing letters like `a` does not appear in the display.
+
+**Explanation:** A calculator should only accept digits, decimal points, and operators. If a user accidentally presses `a` on the keyboard, the system should ignore it. This test checks whether the calculator filters keystrokes before updating the display. If not handled, invalid characters could break calculations or get stored as part of an operand.
+
+---
+
+## **TEST 27 — Reject Alphabetic Input (Multiple Characters)**
+
+**Purpose:** Validate that strings like `abc` are ignored entirely.
+
+**Explanation:** Some users paste text accidentally. The calculator should block the entire string. This also ensures the input pipeline handles multi-character invalid inputs consistently, not just single characters.
+
+---
+
+## **TEST 28 — Reject Special Characters ($, @, #)**
+
+**Purpose:** Confirm that non-numeric symbols are filtered.
+
+**Explanation:** Characters like `$` or `@` have no meaning in arithmetic. Allowing them into the input area could break parsing logic. This test ensures the calculator doesn't attempt to interpret or display these characters.
+
+---
+
+## **TEST 29 — Prevent Double Decimal Points**
+
+**Purpose:** Ensure users cannot enter something like `3.4.2`.
+
+**Explanation:** Only one decimal point is allowed in a number. This test checks whether entering a second `.` is ignored or prevented. Good calculators automatically block additional decimals, preserving data integrity.
+
+---
+
+## **TEST 30 — Reject Multiple Operators in a Row**
+
+**Purpose:** Ensure a sequence like `5 + × 3` is not allowed.
+
+**Explanation:** Pressing an operator when another operator is already active should either replace the previous operator or be ignored, depending on design. This test checks operator-state logic.
+
+---
+
+## **TEST 31 — Handle Empty Input Gracefully**
+
+**Purpose:** Ensure pressing `=` with no input does nothing harmful.
+
+**Explanation:** Some calculators display an error, others simply ignore the operation. The test ensures there is no crash or strange output when users press operators without context.
+
+---
+
+## **TEST 32 — Reject Leading Operators (Except Unary Minus)**
+
+**Purpose:** Prevent starting input with `+`, `×`, or `÷`.
+
+**Explanation:** Starting with `+` or `÷` has no meaning, but starting with `-` can mean a negative number. This test verifies handling of unary minus vs invalid leading symbols.
+
+---
+
+## **TEST 33 — Whitespace Handling for Pasted Input**
+
+**Purpose:** Ensure spaces do not break numeric parsing.
+
+**Explanation:** Pasting something like `  123  ` should automatically trim spaces. This test checks whether whitespace is safely removed before processing.
+
+---
+
+## **TEST 34 — Prevent Overflowing Input Length**
+
+**Purpose:** Ensure users cannot enter more digits than allowed.
+
+**Explanation:** Displays often have limits like 12 or 15 digits. Allowing unlimited input may cause display breakage or performance issues. This test ensures proper enforcement.
+
+---
+
+## **TEST 35 — Detect Invalid Decimal Placement**
+
+**Purpose:** Prevent decimals before digits like `.5` if the calculator does not support it.
+
+**Explanation:** Some calculators allow `.5`, others require `0.5`. This test confirms correct behavior based on product expectations.
+
+---
+
+# **SECTION 4 — ERROR HANDLING TESTS**
+
+These tests ensure the calculator does not crash or misbehave when encountering impossible or undefined operations.
+
+---
+
+## **TEST 36 — Division by Zero Error Message**
+
+**Purpose:** Ensure dividing by zero (`6 ÷ 0`) shows a proper error.
+
+**Explanation:** This is one of the most common error conditions. The calculator must display something like `Error` or `Cannot divide by zero`, and it must remain responsive afterward.
+
+---
+
+## **TEST 37 — Handling Infinity (Overflow from Division)**
+
+**Purpose:** Validate how the calculator handles infinity.
+
+**Explanation:** A case like `1 ÷ 0` may result in `Infinity` rather than an error message depending on design. This verifies the display formatting.
+
+---
+
+## **TEST 38 — Overflow from Large Calculations**
+
+**Purpose:** Ensure large outputs trigger error or formatting rules.
+
+**Explanation:** Operations like `9999999999 × 9999999999` may exceed display limits. The test checks whether the system switches to scientific notation or displays overflow.
+
+---
+
+## **TEST 39 — Underflow with Tiny Decimal Results**
+
+**Purpose:** Validate behavior when results are extremely small.
+
+**Explanation:** Dividing tiny numbers may lead to results like `1e-20`. The calculator must either show scientific notation or round to zero per spec.
+
+---
+
+## **TEST 40 — Invalid Operation Sequence Error**
+
+**Purpose:** Ensure invalid sequences like `+=` show an error.
+
+**Explanation:** If users press operators with no operands, the calculator should not attempt calculation. This verifies the calculator’s internal expression validation.
+
+---
+
+# **SECTION 5 — CHAINED CALCULATIONS & EQUALS BEHAVIOR**
+
+These tests verify how the calculator behaves when users continue computing beyond a single `=` press.
+
+---
+
+## **TEST 41 — Basic Chain: Continue After Equals**
+
+**Purpose:** Ensure continuing after a completed calculation works.
+
+**Explanation:** Example: `2 + 3 =` → result `5`, then pressing `+ 4 =` should give `9`. This tests memory of the last result.
+
+---
+
+## **TEST 42 — Repeated Equals Behavior**
+
+**Purpose:** Verify pressing `=` repeatedly repeats the last operation.
+
+**Explanation:** Example: `2 + 3 =` shows `5`; pressing `=` again should add `3` again, giving `8`. This test checks persistent operator memory.
+
+---
+
+## **TEST 43 — Operator Switch After Equals**
+
+**Purpose:** Ensure switching operators after equals works.
+
+**Explanation:** Example: `5 + 5 = 10`, then `× 2 =` should give `20`. The calculator must disregard previous operator and use the new one.
+
+---
+
+## **TEST 44 — Multi-step Mixed Chain**
+
+**Purpose:** Validate long sequence accuracy.
+
+**Explanation:** Example: `2 + 2 = 4`, then `× 3 = 12`, then `- 6 = 6`. This tests long-term state management.
+
+---
+
+## **TEST 45 — Chain with Decimals**
+
+**Purpose:** Check chaining accuracy with decimal numbers.
+
+**Explanation:** Example: `1.5 + 0.5 = 2`, then `÷ 2 = 1`. This ensures decimal precision persists between steps.
+
+---
+
+## **TEST 46 — Clear Entry During Chain**
+
+**Purpose:** Test `CE` functionality in the middle of a chain.
+
+**Explanation:** Example: `5 + 7`, then press `CE`, enter `3`, press `=`, result should be `8`. This checks operand reset logic.
+
+---
+
+## **TEST 47 — Full Clear During Chain**
+
+**Purpose:** Ensure pressing `C` resets the entire process.
+
+**Explanation:** Example: `5 + 7`, press `C`, then press `=` → nothing should happen, as everything is cleared.
+
+---
+
+## **TEST 48 — Chain After Error State**
+
+**Purpose:** Confirm calculations do not continue after an error until cleared.
+
+**Explanation:** Example: `6 ÷ 0` → error. Pressing `+ 5` should not proceed until user clears the error.
+
+---
+
+## **TEST 49 — Starting New Chain With Result as Operand**
+
+**Purpose:** Validate using a previous result as a new input.
+
+**Explanation:** After `3 × 3 = 9`, pressing `× 2 =` should treat `9` as the first operand.
+
+---
+
+## **TEST 50 — Chain with Negative Results**
+
+**Purpose:** Test negative transition during chained operations.
+
+**Explanation:** Example: `2 - 5 = -3`, then `× 3 = -9`. This checks how negative results flow into next operations.
+
+---
+
+D OF PART 2
+
+Part 3 (Tests 51–75) will be prepared in the next container w# ENhen requested.
