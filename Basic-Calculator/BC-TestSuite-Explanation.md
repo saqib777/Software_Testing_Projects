@@ -1,6 +1,5 @@
 # BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS 
 
-Below are the first **25 test suite explanations**, grouped by test type and written in a long, clear, simple, very detailed way. These explanations focus on understanding *why the test exists*, *what it validates*, and *what underlying logic is being exercised*.
 
 ---
 
