@@ -685,8 +685,5 @@ The app must ignore grouping commas when parsing numbers so the internal value b
 
 ---
 
-# END OF PART 3
-
-Part 4 (Tests 76–100) will be prepared in the next container when requested.
 
 
