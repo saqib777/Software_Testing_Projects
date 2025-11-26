@@ -1,8 +1,6 @@
 # BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS 
 
 
----
-
 # **SECTION 1 — BASIC ARITHMETIC OPERATIONS**
 
 These tests verify that the four fundamental calculator operations behave exactly as they should. Although they look simple on the surface, these tests ensure the entire computational engine is behaving reliably.
