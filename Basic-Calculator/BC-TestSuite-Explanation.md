@@ -431,5 +431,262 @@ These tests verify how the calculator behaves when users continue computing beyo
 **Explanation:** Example: `2 - 5 = -3`, then `× 3 = -9`. This checks how negative results flow into next operations.
 
 ---
+# BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS (PART 3: TESTS 51–75)
+
+This section continues the in‑depth explanations of each test in your basic calculator test suite.
+Here, we focus on UI behavior, keyboard behavior, display logic, and precision handling.
+Everything is explained gently, clearly, and in long detail so you fully understand the purpose behind each test.
+
+---
+
+# **SECTION 6 — UI BUTTONS, KEYBOARD INPUT & FOCUS BEHAVIOR**
+
+The calculator is a highly interactive tool. Even if its arithmetic is perfect, a broken button, wrong event trigger, or misaligned keyboard mapping can ruin the experience.
+These tests ensure the UI itself is solid and predictable.
+
+---
+
+## **TEST 51 — Numeric Button Click Response (Digit 0–9)**
+
+**Purpose:** Ensure every digit button (0–9) enters the correct number on the display.
+
+**Explanation:**
+Although this feels obvious, it’s critical. Each digit button must send the exact value to the display without delay or duplication. The test confirms the event listeners are correctly wired and that pressing, say, `7`, doesn’t accidentally print `77` or nothing at all. It also validates the visual feedback (button press animation) if the UI supports it.
+
+---
+
+## **TEST 52 — Operator Button Response (+, -, ×, ÷)**
+
+**Purpose:** Verify that each operator button sets the correct operator state.
+
+**Explanation:**
+When a user presses `+`, the calculator must store the current number as the first operand, switch to “expecting second operand” mode, and display the operator or leave the number unchanged depending on UI design. This ensures correct operation sequencing.
+
+---
+
+## **TEST 53 — Decimal Point Button Behavior**
+
+**Purpose:** Ensure pressing `.` inserts a decimal only when allowed.
+
+**Explanation:**
+The calculator must block multiple decimals inside a single number. This test ensures the UI doesn’t let the user insert invalid numeric structures.
+
+---
+
+## **TEST 54 — Clear Button (C) Behavior**
+
+**Purpose:** Confirm `C` completely resets calculator state.
+
+**Explanation:**
+This tests whether all variables—first operand, second operand, operator, display text—reset instantly so the calculator starts fresh.
+
+---
+
+## **TEST 55 — Clear Entry (CE) Behavior**
+
+**Purpose:** Ensure CE only clears the current input, not the entire operation.
+
+**Explanation:**
+If the user is midway through `5 + 7`, CE should clear only the `7`, not the entire expression. This tests operand-level memory.
+
+---
+
+## **TEST 56 — Equals Button Visual and Functional Response**
+
+**Purpose:** Verify that pressing `=` triggers immediate calculation.
+
+**Explanation:**
+This checks both function and UI feedback, confirming that the button click fires the calculation event and updates the display.
+
+---
+
+## **TEST 57 — Button Press Animation/Feedback**
+
+**Purpose:** Ensure every button provides visible/ tactile feedback.
+
+**Explanation:**
+This ensures users see that a button was successfully pressed. It helps detect UX issues.
+
+---
+
+## **TEST 58 — Keyboard Input for Digits**
+
+**Purpose:** Validate that typing numbers on the keyboard mirrors button behavior.
+
+**Explanation:**
+Many users prefer typing instead of clicking. This test ensures keyboard events merge seamlessly with UI events.
+
+---
+
+## **TEST 59 — Keyboard Input for Operators**
+
+**Purpose:** Confirm pressing `+`, `-`, `*`, `/` on the keyboard works like button presses.
+
+**Explanation:**
+The test ensures mapping rules (like `*` → multiply, `/` → divide) are correctly set up.
+
+---
+
+## **TEST 60 — Backspace Key Functionality**
+
+**Purpose:** Ensure users can delete the last entered digit.
+
+**Explanation:**
+This helps correct mistakes without clearing entire expressions. The test confirms display updates one character at a time.
+
+---
+
+## **TEST 61 — Tab Focus Order**
+
+**Purpose:** Validate the movement between buttons using Tab.
+
+**Explanation:**
+The calculator’s tab order must match visual layout so keyboard-only users can navigate easily.
+
+---
+
+## **TEST 62 — Enter Key Performs Equals Action**
+
+**Purpose:** Ensure pressing Enter calculates the result.
+
+**Explanation:**
+This is expected behavior for most calculators and improves accessibility.
+
+---
+
+# **SECTION 7 — DECIMAL PRECISION & ROUNDING TESTS**
+
+These tests focus on how the calculator handles tricky decimal arithmetic.
+Floating‑point numbers naturally introduce precision issues, so the calculator must deliberately format and round results.
+
+---
+
+## **TEST 63 — Decimal Precision: 0.1 + 0.2 Example**
+
+**Purpose:** Validate correct handling of known floating‑point pitfalls.
+
+**Explanation:**
+Computers often compute `0.1 + 0.2` as `0.30000000000000004`.
+The calculator must apply rounding before displaying the result.
+
+---
+
+## **TEST 64 — Maximum Decimal Places Allowed**
+
+**Purpose:** Ensure the calculator enforces a defined precision limit.
+
+**Explanation:**
+If the limit is 10 decimal places, typing beyond that should not be allowed. This prevents display overflow and inconsistent rounding.
+
+---
+
+## **TEST 65 — Rounding on Long Decimal Results**
+
+**Purpose:** Confirm long decimals like `1 ÷ 3` produce properly rounded values.
+
+**Explanation:**
+The test ensures the result doesn’t print endless digits but displays something like `0.3333333` based on precision settings.
+
+---
+
+## **TEST 66 — Removing Unnecessary Trailing Zeros**
+
+**Purpose:** Ensure results like `2.5000` render as `2.5`.
+
+**Explanation:**
+This improves visual clarity and ensures results are presented neatly.
+
+---
+
+## **TEST 67 — Consistent Rounding Mode**
+
+**Purpose:** Verify the rounding mode (e.g., half‑up, banker's rounding).
+
+**Explanation:**
+All rounding must follow one consistent rule. This test confirms whether rounding behavior matches specification.
+
+---
+
+## **TEST 68 — Scientific Notation Trigger Threshold**
+
+**Purpose:** Ensure very large or tiny results switch to exponential format correctly.
+
+**Explanation:**
+If `999999999 × 999999999` exceeds the display limit, the result should become something like `9.99e+17`.
+
+---
+
+## **TEST 69 — Decimal Subtraction Precision**
+
+**Purpose:** Validate subtraction such as `7.5 - 2.25` holds correct place values.
+
+**Explanation:**
+Decimal subtraction requires precise digit alignment. The test ensures no rounding errors appear prematurely.
+
+---
+
+## **TEST 70 — Decimal Multiplication Precision**
+
+**Purpose:** Check whether multiplying decimals respects decimal places.
+
+**Explanation:**
+Example: `2.5 × 0.4 = 1.0`. The calculator should show `1` or `1.0` depending on design.
+
+---
+
+# **SECTION 8 — LOCALE & NUMBER FORMATTING TESTS**
+
+Different users use different number formats. Calculators must adapt to punctuation styles and grouping rules of the region.
+
+---
+
+## **TEST 71 — US Locale Formatting (1,234.56)**
+
+**Purpose:** Validate comma as thousand separator and dot as decimal.
+
+**Explanation:**
+This ensures numbers display naturally for users in the U.S.
+
+---
+
+## **TEST 72 — EU Locale Formatting (1.234,56)**
+
+**Purpose:** Confirm dot becomes thousand separator and comma becomes decimal.
+
+**Explanation:**
+Here, typing `,` must create a decimal, not a separator. This tests locale‑aware parsing.
+
+---
+
+## **TEST 73 — Switching Locales Mid‑Session**
+
+**Purpose:** Ensure formatting adjusts immediately when locale setting is changed.
+
+**Explanation:**
+If a user switches device locale, the calculator must immediately reformat the existing value.
+
+---
+
+## **TEST 74 — Accepting Locale‑Specific Input (Comma Decimal)**
+
+**Purpose:** Validate entering a comma as a decimal works for EU users.
+
+**Explanation:**
+Typing `3,5` should register as `3.5` internally.
+
+---
+
+## **TEST 75 — Grouping Separator Handling in Input**
+
+**Purpose:** Ensure the calculator properly handles numbers like `1,000` during input.
+
+**Explanation:**
+The app must ignore grouping commas when parsing numbers so the internal value becomes `1000`.
+
+---
+
+# END OF PART 3
+
+Part 4 (Tests 76–100) will be prepared in the next container when requested.
 
 
