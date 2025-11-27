@@ -951,6 +951,266 @@ Previously, switching from `+` to `×` mid-sequence may have retained the wrong 
 
 ---
 
+# BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS (PART 5: TESTS 101–125)
+
+This section continues your deeply detailed breakdown of the entire 144‑test calculator suite.
+Part 5 focuses on finishing the **Regression tests**, then moving into **Integration**, **Large Number & Scientific Notation**, and **History/Persistence** categories.
+
+As always, each explanation is written clearly, naturally, and thoroughly.
+
+---
+
+# **SECTION 13 — REGRESSION TESTS (CONTINUED)**
+
+Regression tests ensure previous bugs never reappear. These tests often come from real defects discovered during earlier cycles.
+
+---
+
+## **TEST 101 — Regression: Display Freeze After Chain Calculation**
+
+**Purpose:** Ensure the calculator no longer locks up after long operation chains.
+
+**Explanation:**
+A previous defect might have caused the display to freeze after sequences like `1 + 2 =`, then `× 3 =`, then `÷ 2 =`. This test ensures the UI continues updating smoothly and remains responsive.
+
+---
+
+## **TEST 102 — Regression: Incorrect Negative Sign Handling**
+
+**Purpose:** Confirm the negative sign is applied consistently.
+
+**Explanation:**
+A historical bug may have shown negative values without the minus sign, or placed it in the wrong position. This test ensures negative numbers display correctly and persist through operations.
+
+---
+
+## **TEST 103 — Regression: CE Clearing More Than Intended**
+
+**Purpose:** Ensure CE clears only the last entry.
+
+**Explanation:**
+A prior issue may have caused CE to wipe the entire calculation. This test checks operand-level clearing behaves correctly.
+
+---
+
+## **TEST 104 — Regression: Incorrect Parentheses Evaluation**
+
+**Purpose:** Validate parentheses are evaluated in the correct order.
+
+**Explanation:**
+Previously the calculator might have ignored inner parentheses or evaluated them incorrectly. This test reconfirms correctness.
+
+---
+
+## **TEST 105 — Regression: Thousands Separator Not Updating After Locale Switch**
+
+**Purpose:** Ensure real-time locale switching updates formatting.
+
+**Explanation:**
+Testing that changing locales instantly reformats the existing displayed number (e.g., `1,234` → `1.234`) confirms the earlier bug fix remains intact.
+
+---
+
+## **TEST 106 — Regression: Copy-to-Clipboard Truncating Decimals**
+
+**Purpose:** Verify copied results include full decimal precision.
+
+**Explanation:**
+A previous bug might have copied `12.3456` as `12.34`. The test ensures full precision is preserved.
+
+---
+
+# **SECTION 14 — INTEGRATION TESTS**
+
+These tests ensure that the calculator works correctly with underlying system interfaces such as the OS clipboard or any external modules.
+
+---
+
+## **TEST 107 — Integration: System Clipboard Compatibility**
+
+**Purpose:** Confirm that copying values works across different apps.
+
+**Explanation:**
+Copying output from the calculator and pasting it into Notepad or Excel must preserve exact formatting.
+
+---
+
+## **TEST 108 — Integration: Pastes From External Apps**
+
+**Purpose:** Ensure numbers copied from apps like Excel paste cleanly.
+
+**Explanation:**
+External apps sometimes include invisible formatting. The calculator must safely sanitize and accept numeric input.
+
+---
+
+## **TEST 109 — Integration: External Keyboard Layouts**
+
+**Purpose:** Check compatibility with non‑English keyboards.
+
+**Explanation:**
+Operators can appear in different positions or require Shift keys. This test ensures universal input correctness.
+
+---
+
+## **TEST 110 — Integration: Scientific Notation Imported From Third‑Party Tool**
+
+**Purpose:** Validate scientific values copied from apps like MATLAB are parsed safely.
+
+**Explanation:**
+This ensures the calculator consistently interprets or rejects `4.2E+7` based on supported features.
+
+---
+
+# **SECTION 15 — LARGE NUMBERS & SCIENTIFIC NOTATION TESTS**
+
+These tests explore the calculator’s behavior at numerical extremes.
+Large number handling is critical for financial, engineering, or scientific use.
+
+---
+
+## **TEST 111 — Very Large Multiplication Overflow**
+
+**Purpose:** Ensure multiplying huge numbers results in a safe overflow or scientific notation.
+
+**Explanation:**
+e.g., `999999999 × 999999999`.
+The calculator should either switch to exponential format or display an overflow warning.
+
+---
+
+## **TEST 112 — Very Small Decimal Division**
+
+**Purpose:** Validate handling of results close to zero.
+
+**Explanation:**
+Something like `0.0000001 ÷ 1000000` should trigger scientific notation or round to zero, depending on supported range.
+
+---
+
+## **TEST 113 — Scientific Notation Input Acceptance**
+
+**Purpose:** Check whether users can input numbers like `1e10`.
+
+**Explanation:**
+Some calculators allow typing scientific notation. This test verifies whether it’s supported and parsed correctly.
+
+---
+
+## **TEST 114 — Scientific Notation Output for Long Results**
+
+**Purpose:** Ensure very long results convert to compact exponential form.
+
+**Explanation:**
+For extremely large outputs, exponential notation improves readability and prevents UI overflow.
+
+---
+
+## **TEST 115 — Rounding in Scientific Mode**
+
+**Purpose:** Validate precision when switching to exponential notation.
+
+**Explanation:**
+If the calculator formats `123456789012345` as `1.234567890e14`, rounding must be accurate and consistent.
+
+---
+
+## **TEST 116 — Negative Scientific Notation**
+
+**Purpose:** Ensure negative exponential values display correctly.
+
+**Explanation:**
+e.g., `-3.2e-7` should retain the negative sign and exponent formatting.
+
+---
+
+## **TEST 117 — Conversion Between Normal and Scientific Mode**
+
+**Purpose:** Check toggling scientific mode (if supported).
+
+**Explanation:**
+Some calculators let users manually switch between full number and exponential format.
+
+---
+
+## **TEST 118 — Prevent Exponent Overflow**
+
+**Purpose:** Ensure extremely large or tiny exponents trigger an error.
+
+**Explanation:**
+For example, entering `1e309` could exceed double‑precision limits.
+
+---
+
+## **TEST 119 — Leading Zeros in Large Numbers**
+
+**Purpose:** Ensure the calculator ignores unnecessary leading zeros.
+
+**Explanation:**
+e.g., `00000012345` should simply display `12345` without generating formatting issues.
+
+---
+
+## **TEST 120 — Large Number Addition**
+
+**Purpose:** Verify adding large values doesn’t cause display corruption.
+
+**Explanation:**
+Example: `9999999999 + 1` should produce a readable result or scientific fallback.
+
+---
+
+# **SECTION 16 — HISTORY & PERSISTENCE TESTS**
+
+These tests examine whether the calculator stores past operations, how users interact with that history, and whether it persists across sessions.
+
+---
+
+## **TEST 121 — History Records Each Completed Operation**
+
+**Purpose:** Ensure every `=` creates a new history record.
+
+**Explanation:**
+If a user performs `2 + 3 =`, `7 × 5 =`, each result should appear in the history panel.
+
+---
+
+## **TEST 122 — History Entry Format**
+
+**Purpose:** Validate clear and understandable formatting.
+
+**Explanation:**
+A typical entry should show both the expression and the result, e.g., `2 + 3 = 5`.
+
+---
+
+## **TEST 123 — Clear History Functionality**
+
+**Purpose:** Confirm users can delete all records.
+
+**Explanation:**
+After clearing, the history panel must be empty with no ghost items remaining.
+
+---
+
+## **TEST 124 — History Persistence Across App Restart**
+
+**Purpose:** Check whether history survives closing/reopening (if supported).
+
+**Explanation:**
+Some calculators store history locally. This test verifies consistency with intended behavior.
+
+---
+
+## **TEST 125 — Recall From History into Display**
+
+**Purpose:** Ensure clicking a history entry restores that value or expression.
+
+**Explanation:**
+This test checks that history values feed back into the calculator for reuse without altering original formatting.
+
+---
+
 
 
 
