@@ -42,8 +42,5 @@ This file contains **Test Cases 1–20**. More will follow in the next container
 | 20      | 2025-11-26 | PrestaShop Demo | TC-PS-020    | Empty Cart Checkout Restriction | Cart/Checkout        | 1             | Try accessing checkout with empty cart | Navigate         | Checkout URL          | —                                                          | User prevented; redirected to empty cart message |               |        |                  |              |
 
 
-
-
 ---
 
-**Part 2 (Test Cases 21–40) will be generated in the next container when you say: “Next”.**
