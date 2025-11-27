@@ -685,5 +685,272 @@ The app must ignore grouping commas when parsing numbers so the internal value b
 
 ---
 
+# BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS (PART 4: TESTS 76–100)
+
+This section continues your full, deeply detailed breakdown of all 144 calculator test cases.
+Part 4 covers clipboard behavior, accessibility, performance, security, and begins regression categories.
+
+Everything is explained clearly, conversationally, and with enough depth so you fully understand what each test validates.
+
+---
+
+# **SECTION 9 — CLIPBOARD COPY/PASTE TESTS**
+
+Clipboard operations are surprisingly common. Users copy values from other apps and paste them into the calculator, or they compute something and copy it out.
+These tests ensure that interaction behaves safely and predictably.
+
+---
+
+## **TEST 76 — Copy Result to Clipboard**
+
+**Purpose:** Confirm pressing the copy command (Ctrl+C or copy button) copies the displayed result.
+
+**Explanation:**
+This test verifies that the displayed value (not an internal raw value) is copied. We ensure formatting is preserved, no hidden characters appear, and the text is available for pasting into other applications.
+
+---
+
+## **TEST 77 — Paste Valid Number into Calculator**
+
+**Purpose:** Ensure pasting something like `1234` inserts it cleanly.
+
+**Explanation:**
+This test verifies input sanitation. When pasting text, the calculator shouldn’t treat the number differently than manual typing. The pasted value must appear instantly and correctly in the display.
+
+---
+
+## **TEST 78 — Paste Formatted Number (1,234.56)**
+
+**Purpose:** Validate that pasted numbers with commas are interpreted correctly.
+
+**Explanation:**
+Users often copy numbers with formatting, such as thousand separators. The calculator must strip formatting gracefully and store the actual numeric value without commas.
+
+---
+
+## **TEST 79 — Reject Pasting Invalid Text (e.g., "abc123")**
+
+**Purpose:** Ensure mixed text cannot break the calculator.
+
+**Explanation:**
+If someone pastes “abc123”, the calculator must ignore non-numeric characters and avoid errors. This tests robustness in string cleaning.
+
+---
+
+## **TEST 80 — Paste Scientific Notation (e.g., "1.2e5")**
+
+**Purpose:** Verify the calculator accepts or rejects scientific notation properly.
+
+**Explanation:**
+If the calculator supports scientific notation, it should interpret `1.2e5` as 120000. If not, it should show an error. This test checks consistent behavior.
+
+---
+
+# **SECTION 10 — ACCESSIBILITY (A11Y) TESTS**
+
+Accessibility ensures the calculator is usable for people with disabilities. These tests validate keyboard-only usage, screen reader output, and visual clarity.
+
+---
+
+## **TEST 81 — Tab Through All Buttons**
+
+**Purpose:** Ensure keyboard-only users can reach every element.
+
+**Explanation:**
+Elements must have proper tab indexes. No button should be skipped or require a mouse.
+
+---
+
+## **TEST 82 — Screen Reader Label on Numeric Buttons**
+
+**Purpose:** Ensure screen readers announce button labels.
+
+**Explanation:**
+For example, when a user focuses on the `7` button, the screen reader should say “Seven, button”. This helps visually impaired users.
+
+---
+
+## **TEST 83 — Screen Reader Announcement of Display Value**
+
+**Purpose:** Verify the display area updates with aria-live.
+
+**Explanation:**
+Whenever the result changes, a screen reader should announce it. This prevents silent UI updates.
+
+---
+
+## **TEST 84 — Color Contrast Compliance**
+
+**Purpose:** Ensure text and buttons meet WCAG contrast standards.
+
+**Explanation:**
+Low contrast makes numbers hard to read. This test checks visual accessibility.
+
+---
+
+## **TEST 85 — Focus Indicator Visibility**
+
+**Purpose:** Validate users can see where the keyboard focus currently is.
+
+**Explanation:**
+A focus ring or highlight must appear around active buttons.
+
+---
+
+## **TEST 86 — Accessible Error Messages**
+
+**Purpose:** Ensure error state is announced verbally.
+
+**Explanation:**
+If division by zero occurs, screen reader should announce “Error”.
+
+---
+
+## **TEST 87 — Large Text / Zoom Behavior**
+
+**Purpose:** Validate calculator UI scales at 200% zoom.
+
+**Explanation:**
+The layout must adapt gracefully at high accessibility zoom levels.
+
+---
+
+## **TEST 88 — Keyboard Shortcuts Documentation Accessibility**
+
+**Purpose:** Ensure help/about section is accessible.
+
+**Explanation:**
+Screen readers must be able to read shortcut descriptions easily.
+
+---
+
+# **SECTION 11 — PERFORMANCE & STRESS TESTS**
+
+These tests ensure the calculator stays responsive even under heavy load or rapid interactions.
+
+---
+
+## **TEST 89 — Rapid Button Pressing (Stress)**
+
+**Purpose:** Ensure pressing a digit rapidly 30–50 times doesn’t freeze the UI.
+
+**Explanation:**
+This tests event queue handling and performance stability.
+
+---
+
+## **TEST 90 — Large Expression Input (Length Stress)**
+
+**Purpose:** Validate the calculator can handle long expressions.
+
+**Explanation:**
+Entering something like “9999999999 × 9999999999 × …” stresses internal buffers.
+
+---
+
+## **TEST 91 — Rapid Operator Switching**
+
+**Purpose:** Ensure switching between `+`, `-`, `×`, `÷` quickly doesn’t break logic.
+
+**Explanation:**
+The state machine must never become inconsistent.
+
+---
+
+## **TEST 92 — Multiple Sequential Calculations (Load Test)**
+
+**Purpose:** Check calculator stability after performing 100+ mixed calculations.
+
+**Explanation:**
+Tests memory leaks, state reset, and overall fluency.
+
+---
+
+## **TEST 93 — Stress Test for Delete/Backspace**
+
+**Purpose:** Ensure rapid backspace presses don’t cause display glitches.
+
+**Explanation:**
+Some apps struggle with repeated deletion events.
+
+---
+
+## **TEST 94 — High-Frequency Paste Operations**
+
+**Purpose:** Validate stability when users paste numbers repeatedly.
+
+**Explanation:**
+This stresses clipboard handlers and input sanitation.
+
+---
+
+# **SECTION 12 — SECURITY & INJECTION SAFETY**
+
+These tests ensure the calculator cannot be used as an attack surface.
+Even a simple input field can trigger vulnerabilities if improperly sanitized.
+
+---
+
+## **TEST 95 — Reject Script Injection (e.g., "<script>")**
+
+**Purpose:** Prevent execution of HTML/scripts.
+
+**Explanation:**
+If someone pastes `<script>alert('x')</script>`, it should be treated as plain text or rejected.
+
+---
+
+## **TEST 96 — Reject SQL-Like Inputs**
+
+**Purpose:** Ensure calculator treats `1; DROP TABLE` as invalid.
+
+**Explanation:**
+Although uncommon, this test prevents accidental or malicious injection.
+
+---
+
+## **TEST 97 — Prevent HTML in Display Area**
+
+**Purpose:** Ensure results never render as HTML.
+
+**Explanation:**
+If display isn’t sanitized, HTML could be interpreted instead of shown as text.
+
+---
+
+## **TEST 98 — Reject Unicode Control Characters**
+
+**Purpose:** Validate stability when pasting invisible Unicode control symbols.
+
+**Explanation:**
+Characters like zero-width joiners can corrupt parsing if not handled.
+
+---
+
+# **SECTION 13 — REGRESSION TESTS (START)**
+
+Regression tests confirm previously fixed bugs never return.
+
+---
+
+## **TEST 99 — Regression: Previously Incorrect Rounding Case**
+
+**Purpose:** Ensure a rounding bug fixed earlier remains fixed.
+
+**Explanation:**
+This tests historical issues like rounding `1.005` incorrectly to `1.00` instead of `1.01`.
+
+---
+
+## **TEST 100 — Regression: Wrong Operator Stored During Chain**
+
+**Purpose:** Verify a known operator-storage bug is resolved.
+
+**Explanation:**
+Previously, switching from `+` to `×` mid-sequence may have retained the wrong operator. This test ensures the fix persists.
+
+---
+
+
 
 
