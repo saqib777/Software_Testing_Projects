@@ -31,13 +31,13 @@ Each explanation remains detailed, simple, and clear so you fully understand the
 
 ---
 
-# **SECTION 17 — HELP / ABOUT & LABEL ACCURACY TESTS**
+# **SECTION 17 - HELP / ABOUT & LABEL ACCURACY TESTS**
 
-These tests ensure users receive correct information about the app—version, documentation, and naming accuracy.
+These tests ensure users receive correct information about the app-version, documentation, and naming accuracy.
 
 ---
 
-## **TEST 126 — Help Menu Opens Successfully**
+## **TEST 126 - Help Menu Opens Successfully**
 
 **Purpose:** Ensure the Help or “?” section opens without errors.
 
@@ -46,7 +46,7 @@ Users often look for instructions or shortcuts. This test verifies that the help
 
 ---
 
-## **TEST 127 — Help Content Accuracy**
+## **TEST 127 - Help Content Accuracy**
 
 **Purpose:** Validate that instructions match actual calculator behavior.
 
@@ -55,7 +55,7 @@ If the help text states that “C clears all” and “CE clears last entry,” 
 
 ---
 
-## **TEST 128 — About Section Shows Correct App Version**
+## **TEST 128 - About Section Shows Correct App Version**
 
 **Purpose:** Ensure the About dialog displays the right version number.
 
@@ -64,7 +64,7 @@ This is important for debugging and user support. The version string must match 
 
 ---
 
-## **TEST 129 — Check Copyright And Branding**
+## **TEST 129 - Check Copyright And Branding**
 
 **Purpose:** Validate legal and branding information.
 
@@ -73,13 +73,13 @@ This test ensures copyright years, company names, and legal notices display accu
 
 ---
 
-# **SECTION 18 — INTERNATIONALIZATION (I18N) & RTL SUPPORT**
+# **SECTION 18 - INTERNATIONALIZATION (I18N) & RTL SUPPORT**
 
 These tests ensure the calculator works correctly in languages that use right-to-left text flows or have different character sets.
 
 ---
 
-## **TEST 130 — Switch to RTL Layout (e.g., Arabic/Hebrew)**
+## **TEST 130 - Switch to RTL Layout (e.g., Arabic/Hebrew)**
 
 **Purpose:** Ensure UI mirrors correctly.
 
@@ -88,7 +88,7 @@ When switched to an RTL language, the layout should flip horizontally while main
 
 ---
 
-## **TEST 131 — RTL Digit Alignment**
+## **TEST 131 - RTL Digit Alignment**
 
 **Purpose:** Validate that numbers appear in the correct direction.
 
@@ -97,7 +97,7 @@ In RTL languages, digits may still be LTR depending on locale rules. This test e
 
 ---
 
-## **TEST 132 — Translated Labels for All Buttons**
+## **TEST 132 - Translated Labels for All Buttons**
 
 **Purpose:** Ensure each UI button displays its translated text.
 
@@ -106,7 +106,7 @@ All labels must switch to localized versions without breaking layout or truncati
 
 ---
 
-## **TEST 133 — RTL Error Message Display**
+## **TEST 133 - RTL Error Message Display**
 
 **Purpose:** Ensure error messages mirror correctly.
 
@@ -115,13 +115,13 @@ When division by zero occurs, RTL languages must display the error text with cor
 
 ---
 
-# **SECTION 19 — INSTALLATION & UPDATE TESTS**
+# **SECTION 19 - INSTALLATION & UPDATE TESTS**
 
 These tests check whether the application installs, updates, and maintains user data correctly.
 
 ---
 
-## **TEST 134 — Fresh Installation Success**
+## **TEST 134 - Fresh Installation Success**
 
 **Purpose:** Confirm the calculator installs cleanly.
 
@@ -130,7 +130,7 @@ A fresh install should launch without requiring extra configuration and should h
 
 ---
 
-## **TEST 135 — App Update Preserves Settings (If Supported)**
+## **TEST 135 - App Update Preserves Settings (If Supported)**
 
 **Purpose:** Ensure settings or preferences survive an update.
 
@@ -139,13 +139,13 @@ If users enabled dark mode or set a default precision level, updating the app sh
 
 ---
 
-# **SECTION 20 — CROSS-BROWSER & RESPONSIVE DESIGN TESTS**
+# **SECTION 20 - CROSS-BROWSER & RESPONSIVE DESIGN TESTS**
 
 For web-based calculators, ensuring compatibility across multiple devices and browsers is essential.
 
 ---
 
-## **TEST 136 — Chrome Compatibility**
+## **TEST 136 - Chrome Compatibility**
 
 **Purpose:** Ensure calculator works smoothly on Google Chrome.
 
@@ -154,7 +154,7 @@ Chrome uses a unique JavaScript engine (V8). The calculator must handle all oper
 
 ---
 
-## **TEST 137 — Firefox Compatibility**
+## **TEST 137 - Firefox Compatibility**
 
 **Purpose:** Validate correct behavior on Firefox.
 
@@ -163,7 +163,7 @@ Firefox’s rendering engine (Gecko) sometimes behaves differently with input fi
 
 ---
 
-## **TEST 138 — Microsoft Edge Compatibility**
+## **TEST 138 - Microsoft Edge Compatibility**
 
 **Purpose:** Ensure stable performance on Edge.
 
@@ -172,7 +172,7 @@ Browser differences in handling key events or CSS grid layouts may affect the UI
 
 ---
 
-## **TEST 139 — Safari Compatibility (If Applicable)**
+## **TEST 139 - Safari Compatibility (If Applicable)**
 
 **Purpose:** Validate iOS/macOS browser behavior.
 
@@ -181,7 +181,7 @@ Safari can behave differently with touch input and decimal handling. This test e
 
 ---
 
-## **TEST 140 — Mobile Responsive Layout**
+## **TEST 140 - Mobile Responsive Layout**
 
 **Purpose:** Ensure calculator adapts to small screens.
 
@@ -190,7 +190,7 @@ Buttons may rearrange or resize. The display should remain readable even on narr
 
 ---
 
-## **TEST 141 — Tablet Responsive Layout**
+## **TEST 141 - Tablet Responsive Layout**
 
 **Purpose:** Validate UI scaling on tablet-sized screens.
 
@@ -199,7 +199,7 @@ Tablets require intermediate layouts. This test ensures readability and correct 
 
 ---
 
-## **TEST 142 — Landscape vs Portrait Mode Behavior**
+## **TEST 142 - Landscape vs Portrait Mode Behavior**
 
 **Purpose:** Ensure layout shifts correctly when device rotates.
 
@@ -208,7 +208,7 @@ Buttons may rearrange or visibility may change. The calculator must stay functio
 
 ---
 
-## **TEST 143 — Zoom Compatibility (Browser Zoom 25%–200%)**
+## **TEST 143 - Zoom Compatibility (Browser Zoom 25%–200%)**
 
 **Purpose:** Validate the calculator scales without layout breaking.
 
@@ -217,7 +217,7 @@ At very high or low zoom, UI should remain clean and buttons remain usable.
 
 ---
 
-## **TEST 144 — Cross-Browser Clipboard Behavior**
+## **TEST 144 - Cross-Browser Clipboard Behavior**
 
 **Purpose:** Ensure copy/paste works consistently across all browsers.
 
@@ -898,14 +898,14 @@ Everything is explained clearly, conversationally, and with enough depth so you 
 
 ---
 
-# **SECTION 9 — CLIPBOARD COPY/PASTE TESTS**
+# **SECTION 9 - CLIPBOARD COPY/PASTE TESTS**
 
 Clipboard operations are surprisingly common. Users copy values from other apps and paste them into the calculator, or they compute something and copy it out.
 These tests ensure that interaction behaves safely and predictably.
 
 ---
 
-## **TEST 76 — Copy Result to Clipboard**
+## **TEST 76 - Copy Result to Clipboard**
 
 **Purpose:** Confirm pressing the copy command (Ctrl+C or copy button) copies the displayed result.
 
@@ -914,7 +914,7 @@ This test verifies that the displayed value (not an internal raw value) is copie
 
 ---
 
-## **TEST 77 — Paste Valid Number into Calculator**
+## **TEST 77 - Paste Valid Number into Calculator**
 
 **Purpose:** Ensure pasting something like `1234` inserts it cleanly.
 
@@ -923,7 +923,7 @@ This test verifies input sanitation. When pasting text, the calculator shouldn�
 
 ---
 
-## **TEST 78 — Paste Formatted Number (1,234.56)**
+## **TEST 78 - Paste Formatted Number (1,234.56)**
 
 **Purpose:** Validate that pasted numbers with commas are interpreted correctly.
 
@@ -932,7 +932,7 @@ Users often copy numbers with formatting, such as thousand separators. The calcu
 
 ---
 
-## **TEST 79 — Reject Pasting Invalid Text (e.g., "abc123")**
+## **TEST 79 - Reject Pasting Invalid Text (e.g., "abc123")**
 
 **Purpose:** Ensure mixed text cannot break the calculator.
 
@@ -941,7 +941,7 @@ If someone pastes “abc123”, the calculator must ignore non-numeric character
 
 ---
 
-## **TEST 80 — Paste Scientific Notation (e.g., "1.2e5")**
+## **TEST 80 - Paste Scientific Notation (e.g., "1.2e5")**
 
 **Purpose:** Verify the calculator accepts or rejects scientific notation properly.
 
@@ -950,13 +950,13 @@ If the calculator supports scientific notation, it should interpret `1.2e5` as 1
 
 ---
 
-# **SECTION 10 — ACCESSIBILITY (A11Y) TESTS**
+# **SECTION 10 - ACCESSIBILITY (A11Y) TESTS**
 
 Accessibility ensures the calculator is usable for people with disabilities. These tests validate keyboard-only usage, screen reader output, and visual clarity.
 
 ---
 
-## **TEST 81 — Tab Through All Buttons**
+## **TEST 81 - Tab Through All Buttons**
 
 **Purpose:** Ensure keyboard-only users can reach every element.
 
@@ -965,7 +965,7 @@ Elements must have proper tab indexes. No button should be skipped or require a 
 
 ---
 
-## **TEST 82 — Screen Reader Label on Numeric Buttons**
+## **TEST 82 - Screen Reader Label on Numeric Buttons**
 
 **Purpose:** Ensure screen readers announce button labels.
 
@@ -974,7 +974,7 @@ For example, when a user focuses on the `7` button, the screen reader should say
 
 ---
 
-## **TEST 83 — Screen Reader Announcement of Display Value**
+## **TEST 83 - Screen Reader Announcement of Display Value**
 
 **Purpose:** Verify the display area updates with aria-live.
 
@@ -983,7 +983,7 @@ Whenever the result changes, a screen reader should announce it. This prevents s
 
 ---
 
-## **TEST 84 — Color Contrast Compliance**
+## **TEST 84 - Color Contrast Compliance**
 
 **Purpose:** Ensure text and buttons meet WCAG contrast standards.
 
@@ -992,7 +992,7 @@ Low contrast makes numbers hard to read. This test checks visual accessibility.
 
 ---
 
-## **TEST 85 — Focus Indicator Visibility**
+## **TEST 85 - Focus Indicator Visibility**
 
 **Purpose:** Validate users can see where the keyboard focus currently is.
 
@@ -1001,7 +1001,7 @@ A focus ring or highlight must appear around active buttons.
 
 ---
 
-## **TEST 86 — Accessible Error Messages**
+## **TEST 86 - Accessible Error Messages**
 
 **Purpose:** Ensure error state is announced verbally.
 
@@ -1010,7 +1010,7 @@ If division by zero occurs, screen reader should announce “Error”.
 
 ---
 
-## **TEST 87 — Large Text / Zoom Behavior**
+## **TEST 87 - Large Text / Zoom Behavior**
 
 **Purpose:** Validate calculator UI scales at 200% zoom.
 
@@ -1019,7 +1019,7 @@ The layout must adapt gracefully at high accessibility zoom levels.
 
 ---
 
-## **TEST 88 — Keyboard Shortcuts Documentation Accessibility**
+## **TEST 88 - Keyboard Shortcuts Documentation Accessibility**
 
 **Purpose:** Ensure help/about section is accessible.
 
@@ -1028,13 +1028,13 @@ Screen readers must be able to read shortcut descriptions easily.
 
 ---
 
-# **SECTION 11 — PERFORMANCE & STRESS TESTS**
+# **SECTION 11 - PERFORMANCE & STRESS TESTS**
 
 These tests ensure the calculator stays responsive even under heavy load or rapid interactions.
 
 ---
 
-## **TEST 89 — Rapid Button Pressing (Stress)**
+## **TEST 89 - Rapid Button Pressing (Stress)**
 
 **Purpose:** Ensure pressing a digit rapidly 30–50 times doesn’t freeze the UI.
 
@@ -1043,7 +1043,7 @@ This tests event queue handling and performance stability.
 
 ---
 
-## **TEST 90 — Large Expression Input (Length Stress)**
+## **TEST 90 - Large Expression Input (Length Stress)**
 
 **Purpose:** Validate the calculator can handle long expressions.
 
@@ -1052,7 +1052,7 @@ Entering something like “9999999999 × 9999999999 × …” stresses internal 
 
 ---
 
-## **TEST 91 — Rapid Operator Switching**
+## **TEST 91 - Rapid Operator Switching**
 
 **Purpose:** Ensure switching between `+`, `-`, `×`, `÷` quickly doesn’t break logic.
 
@@ -1061,7 +1061,7 @@ The state machine must never become inconsistent.
 
 ---
 
-## **TEST 92 — Multiple Sequential Calculations (Load Test)**
+## **TEST 92 - Multiple Sequential Calculations (Load Test)**
 
 **Purpose:** Check calculator stability after performing 100+ mixed calculations.
 
@@ -1070,7 +1070,7 @@ Tests memory leaks, state reset, and overall fluency.
 
 ---
 
-## **TEST 93 — Stress Test for Delete/Backspace**
+## **TEST 93 - Stress Test for Delete/Backspace**
 
 **Purpose:** Ensure rapid backspace presses don’t cause display glitches.
 
@@ -1079,7 +1079,7 @@ Some apps struggle with repeated deletion events.
 
 ---
 
-## **TEST 94 — High-Frequency Paste Operations**
+## **TEST 94 - High-Frequency Paste Operations**
 
 **Purpose:** Validate stability when users paste numbers repeatedly.
 
@@ -1088,14 +1088,14 @@ This stresses clipboard handlers and input sanitation.
 
 ---
 
-# **SECTION 12 — SECURITY & INJECTION SAFETY**
+# **SECTION 12 - SECURITY & INJECTION SAFETY**
 
 These tests ensure the calculator cannot be used as an attack surface.
 Even a simple input field can trigger vulnerabilities if improperly sanitized.
 
 ---
 
-## **TEST 95 — Reject Script Injection (e.g., "<script>")**
+## **TEST 95 - Reject Script Injection (e.g., "<script>")**
 
 **Purpose:** Prevent execution of HTML/scripts.
 
@@ -1104,7 +1104,7 @@ If someone pastes `<script>alert('x')</script>`, it should be treated as plain t
 
 ---
 
-## **TEST 96 — Reject SQL-Like Inputs**
+## **TEST 96 - Reject SQL-Like Inputs**
 
 **Purpose:** Ensure calculator treats `1; DROP TABLE` as invalid.
 
@@ -1113,7 +1113,7 @@ Although uncommon, this test prevents accidental or malicious injection.
 
 ---
 
-## **TEST 97 — Prevent HTML in Display Area**
+## **TEST 97 - Prevent HTML in Display Area**
 
 **Purpose:** Ensure results never render as HTML.
 
@@ -1122,7 +1122,7 @@ If display isn’t sanitized, HTML could be interpreted instead of shown as text
 
 ---
 
-## **TEST 98 — Reject Unicode Control Characters**
+## **TEST 98 - Reject Unicode Control Characters**
 
 **Purpose:** Validate stability when pasting invisible Unicode control symbols.
 
@@ -1131,13 +1131,13 @@ Characters like zero-width joiners can corrupt parsing if not handled.
 
 ---
 
-# **SECTION 13 — REGRESSION TESTS (START)**
+# **SECTION 13 - REGRESSION TESTS (START)**
 
 Regression tests confirm previously fixed bugs never return.
 
 ---
 
-## **TEST 99 — Regression: Previously Incorrect Rounding Case**
+## **TEST 99 - Regression: Previously Incorrect Rounding Case**
 
 **Purpose:** Ensure a rounding bug fixed earlier remains fixed.
 
@@ -1146,7 +1146,7 @@ This tests historical issues like rounding `1.005` incorrectly to `1.00` instead
 
 ---
 
-## **TEST 100 — Regression: Wrong Operator Stored During Chain**
+## **TEST 100 - Regression: Wrong Operator Stored During Chain**
 
 **Purpose:** Verify a known operator-storage bug is resolved.
 
@@ -1164,13 +1164,13 @@ As always, each explanation is written clearly, naturally, and thoroughly.
 
 ---
 
-# **SECTION 13 — REGRESSION TESTS (CONTINUED)**
+# **SECTION 13 - REGRESSION TESTS (CONTINUED)**
 
 Regression tests ensure previous bugs never reappear. These tests often come from real defects discovered during earlier cycles.
 
 ---
 
-## **TEST 101 — Regression: Display Freeze After Chain Calculation**
+## **TEST 101 - Regression: Display Freeze After Chain Calculation**
 
 **Purpose:** Ensure the calculator no longer locks up after long operation chains.
 
@@ -1179,7 +1179,7 @@ A previous defect might have caused the display to freeze after sequences like `
 
 ---
 
-## **TEST 102 — Regression: Incorrect Negative Sign Handling**
+## **TEST 102 - Regression: Incorrect Negative Sign Handling**
 
 **Purpose:** Confirm the negative sign is applied consistently.
 
@@ -1188,7 +1188,7 @@ A historical bug may have shown negative values without the minus sign, or place
 
 ---
 
-## **TEST 103 — Regression: CE Clearing More Than Intended**
+## **TEST 103 - Regression: CE Clearing More Than Intended**
 
 **Purpose:** Ensure CE clears only the last entry.
 
@@ -1197,7 +1197,7 @@ A prior issue may have caused CE to wipe the entire calculation. This test check
 
 ---
 
-## **TEST 104 — Regression: Incorrect Parentheses Evaluation**
+## **TEST 104 - Regression: Incorrect Parentheses Evaluation**
 
 **Purpose:** Validate parentheses are evaluated in the correct order.
 
@@ -1206,7 +1206,7 @@ Previously the calculator might have ignored inner parentheses or evaluated them
 
 ---
 
-## **TEST 105 — Regression: Thousands Separator Not Updating After Locale Switch**
+## **TEST 105 - Regression: Thousands Separator Not Updating After Locale Switch**
 
 **Purpose:** Ensure real-time locale switching updates formatting.
 
@@ -1215,7 +1215,7 @@ Testing that changing locales instantly reformats the existing displayed number 
 
 ---
 
-## **TEST 106 — Regression: Copy-to-Clipboard Truncating Decimals**
+## **TEST 106 - Regression: Copy-to-Clipboard Truncating Decimals**
 
 **Purpose:** Verify copied results include full decimal precision.
 
@@ -1224,13 +1224,13 @@ A previous bug might have copied `12.3456` as `12.34`. The test ensures full pre
 
 ---
 
-# **SECTION 14 — INTEGRATION TESTS**
+# **SECTION 14 - INTEGRATION TESTS**
 
 These tests ensure that the calculator works correctly with underlying system interfaces such as the OS clipboard or any external modules.
 
 ---
 
-## **TEST 107 — Integration: System Clipboard Compatibility**
+## **TEST 107 - Integration: System Clipboard Compatibility**
 
 **Purpose:** Confirm that copying values works across different apps.
 
@@ -1239,7 +1239,7 @@ Copying output from the calculator and pasting it into Notepad or Excel must pre
 
 ---
 
-## **TEST 108 — Integration: Pastes From External Apps**
+## **TEST 108 - Integration: Pastes From External Apps**
 
 **Purpose:** Ensure numbers copied from apps like Excel paste cleanly.
 
@@ -1248,7 +1248,7 @@ External apps sometimes include invisible formatting. The calculator must safely
 
 ---
 
-## **TEST 109 — Integration: External Keyboard Layouts**
+## **TEST 109 - Integration: External Keyboard Layouts**
 
 **Purpose:** Check compatibility with non‑English keyboards.
 
@@ -1257,7 +1257,7 @@ Operators can appear in different positions or require Shift keys. This test ens
 
 ---
 
-## **TEST 110 — Integration: Scientific Notation Imported From Third‑Party Tool**
+## **TEST 110 - Integration: Scientific Notation Imported From Third‑Party Tool**
 
 **Purpose:** Validate scientific values copied from apps like MATLAB are parsed safely.
 
@@ -1266,14 +1266,14 @@ This ensures the calculator consistently interprets or rejects `4.2E+7` based on
 
 ---
 
-# **SECTION 15 — LARGE NUMBERS & SCIENTIFIC NOTATION TESTS**
+# **SECTION 15 - LARGE NUMBERS & SCIENTIFIC NOTATION TESTS**
 
 These tests explore the calculator’s behavior at numerical extremes.
 Large number handling is critical for financial, engineering, or scientific use.
 
 ---
 
-## **TEST 111 — Very Large Multiplication Overflow**
+## **TEST 111 - Very Large Multiplication Overflow**
 
 **Purpose:** Ensure multiplying huge numbers results in a safe overflow or scientific notation.
 
@@ -1283,7 +1283,7 @@ The calculator should either switch to exponential format or display an overflow
 
 ---
 
-## **TEST 112 — Very Small Decimal Division**
+## **TEST 112 - Very Small Decimal Division**
 
 **Purpose:** Validate handling of results close to zero.
 
@@ -1292,7 +1292,7 @@ Something like `0.0000001 ÷ 1000000` should trigger scientific notation or roun
 
 ---
 
-## **TEST 113 — Scientific Notation Input Acceptance**
+## **TEST 113 - Scientific Notation Input Acceptance**
 
 **Purpose:** Check whether users can input numbers like `1e10`.
 
@@ -1301,7 +1301,7 @@ Some calculators allow typing scientific notation. This test verifies whether it
 
 ---
 
-## **TEST 114 — Scientific Notation Output for Long Results**
+## **TEST 114 - Scientific Notation Output for Long Results**
 
 **Purpose:** Ensure very long results convert to compact exponential form.
 
@@ -1310,7 +1310,7 @@ For extremely large outputs, exponential notation improves readability and preve
 
 ---
 
-## **TEST 115 — Rounding in Scientific Mode**
+## **TEST 115 - Rounding in Scientific Mode**
 
 **Purpose:** Validate precision when switching to exponential notation.
 
@@ -1319,7 +1319,7 @@ If the calculator formats `123456789012345` as `1.234567890e14`, rounding must b
 
 ---
 
-## **TEST 116 — Negative Scientific Notation**
+## **TEST 116 - Negative Scientific Notation**
 
 **Purpose:** Ensure negative exponential values display correctly.
 
@@ -1328,7 +1328,7 @@ e.g., `-3.2e-7` should retain the negative sign and exponent formatting.
 
 ---
 
-## **TEST 117 — Conversion Between Normal and Scientific Mode**
+## **TEST 117 - Conversion Between Normal and Scientific Mode**
 
 **Purpose:** Check toggling scientific mode (if supported).
 
@@ -1337,7 +1337,7 @@ Some calculators let users manually switch between full number and exponential f
 
 ---
 
-## **TEST 118 — Prevent Exponent Overflow**
+## **TEST 118 - Prevent Exponent Overflow**
 
 **Purpose:** Ensure extremely large or tiny exponents trigger an error.
 
@@ -1346,7 +1346,7 @@ For example, entering `1e309` could exceed double‑precision limits.
 
 ---
 
-## **TEST 119 — Leading Zeros in Large Numbers**
+## **TEST 119 - Leading Zeros in Large Numbers**
 
 **Purpose:** Ensure the calculator ignores unnecessary leading zeros.
 
@@ -1355,7 +1355,7 @@ e.g., `00000012345` should simply display `12345` without generating formatting 
 
 ---
 
-## **TEST 120 — Large Number Addition**
+## **TEST 120 - Large Number Addition**
 
 **Purpose:** Verify adding large values doesn’t cause display corruption.
 
@@ -1364,13 +1364,13 @@ Example: `9999999999 + 1` should produce a readable result or scientific fallbac
 
 ---
 
-# **SECTION 16 — HISTORY & PERSISTENCE TESTS**
+# **SECTION 16 - HISTORY & PERSISTENCE TESTS**
 
 These tests examine whether the calculator stores past operations, how users interact with that history, and whether it persists across sessions.
 
 ---
 
-## **TEST 121 — History Records Each Completed Operation**
+## **TEST 121 - History Records Each Completed Operation**
 
 **Purpose:** Ensure every `=` creates a new history record.
 
@@ -1379,7 +1379,7 @@ If a user performs `2 + 3 =`, `7 × 5 =`, each result should appear in the histo
 
 ---
 
-## **TEST 122 — History Entry Format**
+## **TEST 122 - History Entry Format**
 
 **Purpose:** Validate clear and understandable formatting.
 
@@ -1388,7 +1388,7 @@ A typical entry should show both the expression and the result, e.g., `2 + 3 = 5
 
 ---
 
-## **TEST 123 — Clear History Functionality**
+## **TEST 123 - Clear History Functionality**
 
 **Purpose:** Confirm users can delete all records.
 
@@ -1397,7 +1397,7 @@ After clearing, the history panel must be empty with no ghost items remaining.
 
 ---
 
-## **TEST 124 — History Persistence Across App Restart**
+## **TEST 124 - History Persistence Across App Restart**
 
 **Purpose:** Check whether history survives closing/reopening (if supported).
 
@@ -1415,13 +1415,13 @@ Each explanation remains detailed, simple, and clear so you fully understand the
 
 ---
 
-# **SECTION 17 — HELP / ABOUT & LABEL ACCURACY TESTS**
+# **SECTION 17 - HELP / ABOUT & LABEL ACCURACY TESTS**
 
-These tests ensure users receive correct information about the app—version, documentation, and naming accuracy.
+These tests ensure users receive correct information about the app-version, documentation, and naming accuracy.
 
 ---
 
-## **TEST 126 — Help Menu Opens Successfully**
+## **TEST 126 - Help Menu Opens Successfully**
 
 **Purpose:** Ensure the Help or “?” section opens without errors.
 
@@ -1430,7 +1430,7 @@ Users often look for instructions or shortcuts. This test verifies that the help
 
 ---
 
-## **TEST 127 — Help Content Accuracy**
+## **TEST 127 - Help Content Accuracy**
 
 **Purpose:** Validate that instructions match actual calculator behavior.
 
@@ -1439,7 +1439,7 @@ If the help text states that “C clears all” and “CE clears last entry,” 
 
 ---
 
-## **TEST 128 — About Section Shows Correct App Version**
+## **TEST 128 - About Section Shows Correct App Version**
 
 **Purpose:** Ensure the About dialog displays the right version number.
 
@@ -1448,7 +1448,7 @@ This is important for debugging and user support. The version string must match 
 
 ---
 
-## **TEST 129 — Check Copyright And Branding**
+## **TEST 129 - Check Copyright And Branding**
 
 **Purpose:** Validate legal and branding information.
 
@@ -1457,13 +1457,13 @@ This test ensures copyright years, company names, and legal notices display accu
 
 ---
 
-# **SECTION 18 — INTERNATIONALIZATION (I18N) & RTL SUPPORT**
+# **SECTION 18 - INTERNATIONALIZATION (I18N) & RTL SUPPORT**
 
 These tests ensure the calculator works correctly in languages that use right-to-left text flows or have different character sets.
 
 ---
 
-## **TEST 130 — Switch to RTL Layout (e.g., Arabic/Hebrew)**
+## **TEST 130 - Switch to RTL Layout (e.g., Arabic/Hebrew)**
 
 **Purpose:** Ensure UI mirrors correctly.
 
@@ -1472,7 +1472,7 @@ When switched to an RTL language, the layout should flip horizontally while main
 
 ---
 
-## **TEST 131 — RTL Digit Alignment**
+## **TEST 131 - RTL Digit Alignment**
 
 **Purpose:** Validate that numbers appear in the correct direction.
 
@@ -1481,7 +1481,7 @@ In RTL languages, digits may still be LTR depending on locale rules. This test e
 
 ---
 
-## **TEST 132 — Translated Labels for All Buttons**
+## **TEST 132 - Translated Labels for All Buttons**
 
 **Purpose:** Ensure each UI button displays its translated text.
 
@@ -1490,7 +1490,7 @@ All labels must switch to localized versions without breaking layout or truncati
 
 ---
 
-## **TEST 133 — RTL Error Message Display**
+## **TEST 133 - RTL Error Message Display**
 
 **Purpose:** Ensure error messages mirror correctly.
 
@@ -1499,13 +1499,13 @@ When division by zero occurs, RTL languages must display the error text with cor
 
 ---
 
-# **SECTION 19 — INSTALLATION & UPDATE TESTS**
+# **SECTION 19 - INSTALLATION & UPDATE TESTS**
 
 These tests check whether the application installs, updates, and maintains user data correctly.
 
 ---
 
-## **TEST 134 — Fresh Installation Success**
+## **TEST 134 - Fresh Installation Success**
 
 **Purpose:** Confirm the calculator installs cleanly.
 
@@ -1514,7 +1514,7 @@ A fresh install should launch without requiring extra configuration and should h
 
 ---
 
-## **TEST 135 — App Update Preserves Settings (If Supported)**
+## **TEST 135 - App Update Preserves Settings (If Supported)**
 
 **Purpose:** Ensure settings or preferences survive an update.
 
@@ -1523,13 +1523,13 @@ If users enabled dark mode or set a default precision level, updating the app sh
 
 ---
 
-# **SECTION 20 — CROSS-BROWSER & RESPONSIVE DESIGN TESTS**
+# **SECTION 20 - CROSS-BROWSER & RESPONSIVE DESIGN TESTS**
 
 For web-based calculators, ensuring compatibility across multiple devices and browsers is essential.
 
 ---
 
-## **TEST 136 — Chrome Compatibility**
+## **TEST 136 - Chrome Compatibility**
 
 **Purpose:** Ensure calculator works smoothly on Google Chrome.
 
@@ -1538,7 +1538,7 @@ Chrome uses a unique JavaScript engine (V8). The calculator must handle all oper
 
 ---
 
-## **TEST 137 — Firefox Compatibility**
+## **TEST 137 - Firefox Compatibility**
 
 **Purpose:** Validate correct behavior on Firefox.
 
@@ -1547,7 +1547,7 @@ Firefox’s rendering engine (Gecko) sometimes behaves differently with input fi
 
 ---
 
-## **TEST 138 — Microsoft Edge Compatibility**
+## **TEST 138 - Microsoft Edge Compatibility**
 
 **Purpose:** Ensure stable performance on Edge.
 
@@ -1556,7 +1556,7 @@ Browser differences in handling key events or CSS grid layouts may affect the UI
 
 ---
 
-## **TEST 139 — Safari Compatibility (If Applicable)**
+## **TEST 139 - Safari Compatibility (If Applicable)**
 
 **Purpose:** Validate iOS/macOS browser behavior.
 
@@ -1565,7 +1565,7 @@ Safari can behave differently with touch input and decimal handling. This test e
 
 ---
 
-## **TEST 140 — Mobile Responsive Layout**
+## **TEST 140 - Mobile Responsive Layout**
 
 **Purpose:** Ensure calculator adapts to small screens.
 
@@ -1574,7 +1574,7 @@ Buttons may rearrange or resize. The display should remain readable even on narr
 
 ---
 
-## **TEST 141 — Tablet Responsive Layout**
+## **TEST 141 - Tablet Responsive Layout**
 
 **Purpose:** Validate UI scaling on tablet-sized screens.
 
@@ -1583,7 +1583,7 @@ Tablets require intermediate layouts. This test ensures readability and correct 
 
 ---
 
-## **TEST 142 — Landscape vs Portrait Mode Behavior**
+## **TEST 142 - Landscape vs Portrait Mode Behavior**
 
 **Purpose:** Ensure layout shifts correctly when device rotates.
 
@@ -1592,7 +1592,7 @@ Buttons may rearrange or visibility may change. The calculator must stay functio
 
 ---
 
-## **TEST 143 — Zoom Compatibility (Browser Zoom 25%–200%)**
+## **TEST 143 - Zoom Compatibility (Browser Zoom 25%–200%)**
 
 **Purpose:** Validate the calculator scales without layout breaking.
 
@@ -1601,7 +1601,7 @@ At very high or low zoom, UI should remain clean and buttons remain usable.
 
 ---
 
-## **TEST 144 — Cross-Browser Clipboard Behavior**
+## **TEST 144 - Cross-Browser Clipboard Behavior**
 
 **Purpose:** Ensure copy/paste works consistently across all browsers.
 
