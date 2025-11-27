@@ -22,6 +22,210 @@ These tests verify that the four fundamental calculator operations behave exactl
 **Explanation:** When users input `-5 + -3`, the calculator must treat both `-5` and `-3` as valid operands, not mistakenly read them as subtraction. This checks internal parsing rules, sign-handling logic, and whether negative numbers are consistently recognized.
 
 ---
+# BASIC CALCULATOR TEST SUITE – DETAILED EXPLANATIONS (PART 6: TESTS 126–144)
+
+This is the **final section** of the full calculator test suite explanation.
+Here, we finish the remaining categories: **Help/About**, **Internationalization (RTL)**, **Installation/Updates**, and **Cross-Browser/Responsive Behavior**.
+
+Each explanation remains detailed, simple, and clear so you fully understand the purpose behind every test.
+
+---
+
+# **SECTION 17 — HELP / ABOUT & LABEL ACCURACY TESTS**
+
+These tests ensure users receive correct information about the app—version, documentation, and naming accuracy.
+
+---
+
+## **TEST 126 — Help Menu Opens Successfully**
+
+**Purpose:** Ensure the Help or “?” section opens without errors.
+
+**Explanation:**
+Users often look for instructions or shortcuts. This test verifies that the help panel loads correctly, doesn’t freeze the UI, and presents readable, properly formatted text.
+
+---
+
+## **TEST 127 — Help Content Accuracy**
+
+**Purpose:** Validate that instructions match actual calculator behavior.
+
+**Explanation:**
+If the help text states that “C clears all” and “CE clears last entry,” this must match actual functionality. This test checks documentation consistency.
+
+---
+
+## **TEST 128 — About Section Shows Correct App Version**
+
+**Purpose:** Ensure the About dialog displays the right version number.
+
+**Explanation:**
+This is important for debugging and user support. The version string must match the build.
+
+---
+
+## **TEST 129 — Check Copyright And Branding**
+
+**Purpose:** Validate legal and branding information.
+
+**Explanation:**
+This test ensures copyright years, company names, and legal notices display accurately.
+
+---
+
+# **SECTION 18 — INTERNATIONALIZATION (I18N) & RTL SUPPORT**
+
+These tests ensure the calculator works correctly in languages that use right-to-left text flows or have different character sets.
+
+---
+
+## **TEST 130 — Switch to RTL Layout (e.g., Arabic/Hebrew)**
+
+**Purpose:** Ensure UI mirrors correctly.
+
+**Explanation:**
+When switched to an RTL language, the layout should flip horizontally while maintaining usability.
+
+---
+
+## **TEST 131 — RTL Digit Alignment**
+
+**Purpose:** Validate that numbers appear in the correct direction.
+
+**Explanation:**
+In RTL languages, digits may still be LTR depending on locale rules. This test ensures correct alignment.
+
+---
+
+## **TEST 132 — Translated Labels for All Buttons**
+
+**Purpose:** Ensure each UI button displays its translated text.
+
+**Explanation:**
+All labels must switch to localized versions without breaking layout or truncation.
+
+---
+
+## **TEST 133 — RTL Error Message Display**
+
+**Purpose:** Ensure error messages mirror correctly.
+
+**Explanation:**
+When division by zero occurs, RTL languages must display the error text with correct direction and spacing.
+
+---
+
+# **SECTION 19 — INSTALLATION & UPDATE TESTS**
+
+These tests check whether the application installs, updates, and maintains user data correctly.
+
+---
+
+## **TEST 134 — Fresh Installation Success**
+
+**Purpose:** Confirm the calculator installs cleanly.
+
+**Explanation:**
+A fresh install should launch without requiring extra configuration and should have no missing file errors.
+
+---
+
+## **TEST 135 — App Update Preserves Settings (If Supported)**
+
+**Purpose:** Ensure settings or preferences survive an update.
+
+**Explanation:**
+If users enabled dark mode or set a default precision level, updating the app should not reset these preferences.
+
+---
+
+# **SECTION 20 — CROSS-BROWSER & RESPONSIVE DESIGN TESTS**
+
+For web-based calculators, ensuring compatibility across multiple devices and browsers is essential.
+
+---
+
+## **TEST 136 — Chrome Compatibility**
+
+**Purpose:** Ensure calculator works smoothly on Google Chrome.
+
+**Explanation:**
+Chrome uses a unique JavaScript engine (V8). The calculator must handle all operations consistently.
+
+---
+
+## **TEST 137 — Firefox Compatibility**
+
+**Purpose:** Validate correct behavior on Firefox.
+
+**Explanation:**
+Firefox’s rendering engine (Gecko) sometimes behaves differently with input fields. This test ensures no layout or event handling issues.
+
+---
+
+## **TEST 138 — Microsoft Edge Compatibility**
+
+**Purpose:** Ensure stable performance on Edge.
+
+**Explanation:**
+Browser differences in handling key events or CSS grid layouts may affect the UI.
+
+---
+
+## **TEST 139 — Safari Compatibility (If Applicable)**
+
+**Purpose:** Validate iOS/macOS browser behavior.
+
+**Explanation:**
+Safari can behave differently with touch input and decimal handling. This test ensures predictable output.
+
+---
+
+## **TEST 140 — Mobile Responsive Layout**
+
+**Purpose:** Ensure calculator adapts to small screens.
+
+**Explanation:**
+Buttons may rearrange or resize. The display should remain readable even on narrow devices.
+
+---
+
+## **TEST 141 — Tablet Responsive Layout**
+
+**Purpose:** Validate UI scaling on tablet-sized screens.
+
+**Explanation:**
+Tablets require intermediate layouts. This test ensures readability and correct spacing.
+
+---
+
+## **TEST 142 — Landscape vs Portrait Mode Behavior**
+
+**Purpose:** Ensure layout shifts correctly when device rotates.
+
+**Explanation:**
+Buttons may rearrange or visibility may change. The calculator must stay functional during orientation changes.
+
+---
+
+## **TEST 143 — Zoom Compatibility (Browser Zoom 25%–200%)**
+
+**Purpose:** Validate the calculator scales without layout breaking.
+
+**Explanation:**
+At very high or low zoom, UI should remain clean and buttons remain usable.
+
+---
+
+## **TEST 144 — Cross-Browser Clipboard Behavior**
+
+**Purpose:** Ensure copy/paste works consistently across all browsers.
+
+**Explanation:**
+Clipboard APIs differ among browsers. This test ensures uniform results across Chrome, Firefox, Safari, and Edge.
+
+---
+
 
 ## **TEST 3 - Addition with Zero**
 
@@ -1202,14 +1406,7 @@ Some calculators store history locally. This test verifies consistency with inte
 
 ---
 
-## **TEST 125 — Recall From History into Display**
 
-**Purpose:** Ensure clicking a history entry restores that value or expression.
-
-**Explanation:**
-This test checks that history values feed back into the calculator for reuse without altering original formatting.
-
----
 
 
 
