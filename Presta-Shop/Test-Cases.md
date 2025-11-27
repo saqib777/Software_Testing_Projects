@@ -42,55 +42,7 @@ This file contains **Test Cases 1–20**. More will follow in the next container
 | 20      | 2025-11-26 | PrestaShop Demo | TC-PS-020    | Empty Cart Checkout Restriction | Cart/Checkout        | 1             | Try accessing checkout with empty cart | Navigate         | Checkout URL          | —                                                          | User prevented; redirected to empty cart message |               |        |                  |              |
 
 
-| 1       | 2025-02-15 | PrestaShop Demo | TC-001       | Verify Home Page Loads Successfully | General / Navigation | 1             | Open the URL                        | Navigate         | Browser               | URL        | Home page loads fully with no errors |               |                    |                  | 00:00:05     |
-| 1       | 2025-02-15 | PrestaShop Demo | TC-001       | Verify Home Page Loads Successfully | General / Navigation | 2             | Verify logo visible                 | Verify           | Logo element          | N/A        | Logo displayed correctly             |               |                    |                  | 00:00:02     |
-| 1       | 2025-02-15 | PrestaShop Demo | TC-001       | Verify Home Page Loads Successfully | General / Navigation | 3             | Verify main navigation menu visible | Verify           | Nav bar               | N/A        | All menu items visible and clickable |               |                    |                  | 00:00:02     |
 
-2 | 2025-02-15 | PrestaShop Demo | TC-002 | Validate Category Navigation | General / Navigation | 1 | Click "Clothes" category | Click | Category link | N/A | Category page loads with products | | | | 00:00:03
-
-3 | 2025-02-15 | PrestaShop Demo | TC-003 | Validate Category Page Product Count | Product Listing | 1 | Navigate to any category | Navigate | Category page | N/A | Product grid displayed | | | | 00:00:02
-3 | 2025-02-15 | PrestaShop Demo | TC-003 | Validate Category Page Product Count | Product Listing | 2 | Count total displayed products | Verify | Product tiles | N/A | Product count matches UI indicator | | | | 00:00:03
-
-4 | 2025-02-15 | PrestaShop Demo | TC-004 | Verify Product Thumbnail Click | Product Listing | 1 | Click any product thumbnail | Click | Product card | N/A | Navigates to product details page | | | | 00:00:03
-
-5 | 2025-02-15 | PrestaShop Demo | TC-005 | Validate Product Detail Information | Product Details | 1 | Open any product page | Navigate | PDP | N/A | PDP loads fully | | | | 00:00:02
-5 | 2025-02-15 | PrestaShop Demo | TC-005 | Validate Product Detail Information | Product Details | 2 | Verify product name, price, description | Verify | Text blocks | N/A | All details displayed correctly | | | | 00:00:03
-
-6 | 2025-02-15 | PrestaShop Demo | TC-006 | Validate Product Image Gallery | Product Details | 1 | Open product page with multiple images | Navigate | Image carousel | N/A | Thumbnails visible | | | | 00:00:02
-6 | 2025-02-15 | PrestaShop Demo | TC-006 | Validate Product Image Gallery | Product Details | 2 | Click next/prev arrows | Click | Carousel arrows | N/A | Image changes accordingly | | | | 00:00:03
-
-7 | 2025-02-15 | PrestaShop Demo | TC-007 | Add Single Product to Cart | Cart | 1 | Open product page | Navigate | PDP | N/A | PDP visible | | | | 00:00:01
-7 | 2025-02-15 | PrestaShop Demo | TC-007 | Add Single Product to Cart | Cart | 2 | Click "Add to cart" | Click | Add-to-cart button | N/A | Success modal appears, cart count increments | | | | 00:00:02
-
-8 | 2025-02-15 | PrestaShop Demo | TC-008 | Increase Quantity in Cart | Cart | 1 | Open cart summary | Click | Cart icon | N/A | Cart visible | | | | 00:00:02
-8 | 2025-02-15 | PrestaShop Demo | TC-008 | Increase Quantity in Cart | Cart | 2 | Use plus button to increase quantity | Click | Qty + button | 1 | Quantity increases; subtotal updates | | | | 00:00:03
-
-9 | 2025-02-15 | PrestaShop Demo | TC-009 | Remove Product from Cart | Cart | 1 | Open cart | Click | Cart icon | N/A | Cart visible | | | | 00:00:02
-9 | 2025-02-15 | PrestaShop Demo | TC-009 | Remove Product from Cart | Cart | 2 | Click delete icon | Click | Remove item | N/A | Item removed; total updates | | | | 00:00:02
-10 | 2025-02-15 | PrestaShop Demo | TC-010 | Validate Search with Valid Keyword | Search | 1 | Enter search keyword | Input | Search bar | "dress" | Matching results displayed | | | | 00:00:03
-10 | 2025-02-15 | PrestaShop Demo | TC-010 | Validate Search with Valid Keyword | Search | 2 | Verify search results correctness | Verify | Results grid | N/A | All items relevant to query | | | | 00:00:02
-11 | 2025-02-15 | PrestaShop Demo | TC-011 | Validate Search with Invalid Keyword | Search | 1 | Enter random string | Input | Search bar | "xyzabc" | No results message displayed | | | | 00:00:02
-12 | 2025-02-15 | PrestaShop Demo | TC-012 | Apply Price Filter | Filters | 1 | Navigate to category | Navigate | Category page | N/A | Category visible | | | | 00:00:02
-12 | 2025-02-15 | PrestaShop Demo | TC-012 | Apply Price Filter | Filters | 2 | Adjust price slider | Drag | Price filter | 0–50 | Display updates results based on range | | | | 00:00:03
-13 | 2025-02-15 | PrestaShop Demo | TC-013 | Sort Products by Price | Sorting | 1 | Select sort dropdown | Click | Sort dropdown | N/A | Dropdown opens | | | | 00:00:01
-13 | 2025-02-15 | PrestaShop Demo | TC-013 | Sort Products by Price | Sorting | 2 | Choose "Price: low to high" | Select | Sort option | N/A | Products reorder correctly | | | | 00:00:03
-14 | 2025-02-15 | PrestaShop Demo | TC-014 | Validate Checkout Button from Cart | Cart / Checkout | 1 | Open cart | Click | Cart icon | N/A | Cart visible | | | | 00:00:02
-14 | 2025-02-15 | PrestaShop Demo | TC-014 | Validate Checkout Button from Cart | Cart / Checkout | 2 | Click "Checkout" | Click | Checkout button | N/A | Redirects to checkout page | | | | 00:00:02
-15 | 2025-02-15 | PrestaShop Demo | TC-015 | Validate Guest Checkout Address Form | Checkout | 1 | Start checkout as guest | Click | Guest checkout option | N/A | Address form visible | | | | 00:00:03
-15 | 2025-02-15 | PrestaShop Demo | TC-015 | Validate Guest Checkout Address Form | Checkout | 2 | Enter mandatory fields | Input | Address fields | Name, email, address | Form accepts data | | | | 00:00:04
-15 | 2025-02-15 | PrestaShop Demo | TC-015 | Validate Guest Checkout Address Form | Checkout | 3 | Leave one required field empty | Input | Field blank | Blank field triggers validation | | | | 00:00:02
-16 | 2025-02-15 | PrestaShop Demo | TC-016 | Validate Language Switch | Localization | 1 | Click language selector | Click | Lang dropdown | N/A | Languages visible | | | | 00:00:02
-16 | 2025-02-15 | PrestaShop Demo | TC-016 | Validate Language Switch | Localization | 2 | Choose different language | Select | Language option | FR | Text updates to selected language | | | | 00:00:03
-17 | 2025-02-15 | PrestaShop Demo | TC-017 | Validate Currency Switch | Localization | 1 | Click currency selector | Click | Currency dropdown | N/A | Options visible | | | | 00:00:02
-17 | 2025-02-15 | PrestaShop Demo | TC-017 | Validate Currency Switch | Localization | 2 | Select different currency | Select | Currency | USD → EUR | Prices update accordingly | | | | 00:00:03
-18 | 2025-02-15 | PrestaShop Demo | TC-018 | Validate Responsive Layout (Mobile) | UI/UX | 1 | Resize browser to mobile width | Resize | Window | 375px width | Mobile layout visible | | | | 00:00:03
-18 | 2025-02-15 | PrestaShop Demo | TC-018 | Validate Responsive Layout (Mobile) | UI/UX | 2 | Check hamburger menu | Click | Menu icon | N/A | Menu opens correctly | | | | 00:00:02
-19 | 2025-02-15 | PrestaShop Demo | TC-019 | Validate Add Review (If Available) | PDP / Reviews | 1 | Navigate to product | Navigate | PDP | N/A | PDP visible | | | | 00:00:02
-19 | 2025-02-15 | PrestaShop Demo | TC-019 | Validate Add Review (If Available) | PDP / Reviews | 2 | Fill review form | Input | Review form | Rating + comments | Review submitted | | | | 00:00:03
-20 | 2025-02-15 | PrestaShop Demo | TC-020 | Validate Product Comparison (If Available) | Comparison | 1 | Select two products | Click | Compare checkbox | N/A | Items added to comparison | | | | 00:00:02
-20 | 2025-02-15 | PrestaShop Demo | TC-020 | Validate Product Comparison (If Available) | Comparison | 2 | Open comparison page | Click | Compare button | N/A | Comparison table displays correctly | | | | 
-21 | 2025-02-15 | PrestaShop Demo | TC-021 | Validate Footer Links | General UI | 1 | Scroll to footer | Scroll | Footer | N/A | Footer visible | | | | 00:00:02
-21 | 2025-02-15 | PrestaShop Demo | TC-021 | Validate Footer Links | General UI | 2 | Click “Delivery”
 
 ---
 
