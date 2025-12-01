@@ -1,92 +1,172 @@
-<div align = "center">
+<div align="center">
   
-  # Ministry_of_testing
+# Software Testing Projects
 </div>
 
-A comprehensive collection of manual and functional test cases designed for practice across sites such as **DemoQA**, **TestSheepNZ**, and other live testing environments.
+A collection of hands-on software testing projects I built while learning and strengthening core QA and SDET skills. Each project includes detailed test suites, scenario breakdowns, screenshots, and full documentation. Most of the work here is manual testing, supported by Katalon Studio for automation and validation.
 
-This repository is part of your continuous learning initiative to strengthen real‑world testing skills by documenting detailed test scenarios, steps, expected results, and validation techniques for multiple web applications.
+## Badges
 
----
-
-## Repository Structure
-
-| Folder/File                   | Description                                                                                                                                                     |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **BookCart/**                 | Contains test cases for BookCart Azure Application. Includes detailed registration and login scenarios.                                                         |
-| **Basic_Calculator.md**       | Manual test cases designed for TestSheepNZ Basic Calculator. Covers input validation, arithmetic operations, and error handling.                                |
-| **ParaBank_Admin_Testing.md** | Detailed manual test documentation for ParaBank Admin Page, covering configuration management, SOAP/JMS service validation, UI checks, and loan provider logic. |
-| **Parking_Calculator.md**     | Full test suite for the Shino Parking Calculator. Includes functional flows, rate verification, boundary conditions, date/time validation, and error scenarios. |
-| **README.md**                 | Repository overview and usage guide.                                                                                                                            |
+![Manual Testing](https://img.shields.io/badge/Testing-Manual-blue)
+![Katalon Studio](https://img.shields.io/badge/Tool-Katalon-green)
+![Status Active](https://img.shields.io/badge/Status-Active-success)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/saqib777/Software_Testing_Projects)
 
 ---
 
-## Test Case Format
+# Table of Contents
 
-All test cases follow a consistent, Excel‑compatible format used in **Katalon Studio** and similar tools:
-
-| Folder/File                   | Description                                                                                                                                             |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **BookCart/**                 | Registration and login test cases for BookCart Azure application.                                                                                       |
-| **Basic_Calculator.md**       | Manual test cases for TestSheepNZ Basic Calculator. Covers input validation, operations, and boundaries.                                                |
-| **ParaBank_Admin_Testing.md** | 30+ detailed test cases for ParaBank Admin Page including SOAP/JMS validations, configuration flows, UI verification, and negative cases.               |
-| **Parking_Calculator.md**     | Detailed test scenarios for Parking Calculator including ticket type validation, pricing logic, invalid date/time, UI checks, and calculation accuracy. |
-| **README.md**                 | Repository overview and general guide.                                                                                                                  |
-
----
-
-## Objectives
-
-* Strengthen understanding of manual testing fundamentals.
-* Practice test design techniques (boundary value, equivalence partitioning, positive/negative testing).
-* Maintain a consistent collection of test cases for learning and reference.
-* Improve test documentation quality using a standardized format.
+1. [Overview](#overview)
+2. [Repository Structure](#repository-structure)
+3. [Project Details](#project-details)
+4. [Tools Used](#tools-used)
+5. [How to Navigate This Repository](#how-to-navigate-this-repository)
+6. [Unique Highlights](#unique-highlights)
+7. [Future Roadmap](#future-roadmap)
+8. [Notes for Recruiters](#notes-for-recruiters)
+9. [About the Author](#about-the-author)
 
 ---
 
-## Contents (so far)
+# Overview
 
-| Application            | Description                                                                   | Status      |
-| ---------------------- | ----------------------------------------------------------------------------- | ----------- |
-| **BookCart**           | Registration and login test cases for BookCart Azure demo site                | Completed   |
-| **Basic Calculator**   | Functional and boundary tests for calculator input and operations             | Completed   |
-| **ParaBank Admin**     | Manual admin‑side test cases including SOAP/JMS, config validation, UI checks | Completed   |
-| **Parking Calculator** | Functional, validation, and rate‑calculation tests                            | Completed   |
-| **Upcoming**           | Additional Ministry of Testing practice sites and DemoQA modules              | In Progress |
+This repository serves as my central portfolio of software testing work. Every folder represents a real application that I tested end-to-end — covering functional flows, validations, error conditions, and boundary cases.
+
+It reflects how I approach testing: structured, thorough, and focused on real-world user journeys.
 
 ---
 
-## How to Use
+# Repository Structure
 
-1. Browse through the folders to explore test cases for each site.
-2. Open the CSV/Markdown test case documentation.
-3. Import them into your preferred testing tool (Katalon Studio, TestLink, Zephyr, etc.).
-4. Follow the steps manually or use them as a base for automation.
-
----
-
-## Future Enhancements
-
-* Add more demo sites and workflows for broader coverage.
-* Introduce automation versions of selected test cases.
-* Include screenshots for failed/edge scenarios.
-* Add integration test samples (SOAP/REST, Database, Playwright, etc.).
-* Introduce load testing samples and extended scenarios.
-
----
-
-## Contributions
-
-Contributions are welcome if you'd like to:
-
-* Add test cases for new practice sites
-* Improve descriptions or documentation
-* Share your learning materials
-
-Feel free to fork the repository, open an issue, or submit a pull request.
+| Folder/File                   | Description                                                                                                                                          |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **BookCart/**                 | Test cases for BookCart Azure Application, including registration and login scenarios.                                                               |
+| **Basic-Calculator/**         | Manual test cases for TestSheepNZ Basic Calculator: input validation, arithmetic operations, and error handling.                                     |
+| **ParaBank/**                 | Test documentation for ParaBank (customer flows) including login, transfers, account creation, and validations.                                      |
+| **ParaBank_Admin_Testing.md** | Covers admin page testing such as configuration management, SOAP/JMS service validation, UI checks, and loan provider logic.                         |
+| **Parking_Calculator.md**     | Full test suite for the Shino Parking Calculator: functional flows, rate validation, boundary conditions, date/time validation, and error scenarios. |
+| **Presta-Shop/**              | Detailed test suite for PrestaShop demo store: product search, cart, checkout, payment, account creation, and negative test flows.                   |
+| **Parasoft/**                 | Extensive testing of Parasoft demo site including account creation, workflows, UI testing, and validation rules.                                     |
+| **Cloth-Shop/**               | Functional and UI testing of an eCommerce clothing store: product listing, filters, cart logic, and checkout.                                        |
+| **PHPTravels/**               | Complete test suite for PHPTravels demo: booking workflows, authentication, validations, and UI checks.                                              |
+| **shino-de-parkcalc/**        | Additional scenarios, rate rules, invalid flows, boundary testing for Shino Parking Calculator.                                                      |
+| **README.md**                 | Project documentation.                                                                                                                               |
 
 ---
 
-## Author
+# Project Details
 
-Mohammed Saqib - Focused on learning Software Testing, Test Design, and Automation through hands‑on practice and open‑source collaboration.
+## BookCart
+
+* Covered registration, login, input validation, UI checks, and error scenarios.
+* Includes both positive and negative flows.
+
+## Basic Calculator
+
+* Arithmetic operations (addition, subtraction, multiplication, division).
+* Input validation (blank fields, invalid characters, overflows).
+* Error handling for divide-by-zero.
+
+## ParaBank
+
+* Customer-facing tests: login, transfers, bill payments, activity checks.
+* Admin portal tests: configuration, JAXB/SOAP services, form validations.
+
+## Parking Calculator
+
+* Rate calculation logic testing.
+* Time/date validation.
+* Complex boundary conditions.
+* Error messages and invalid-flow coverage.
+
+## PrestaShop
+
+* End-to-end eCommerce flow testing.
+* Cart, checkout, discounts, address management.
+* UI validations and negative scenarios.
+
+## Parasoft
+
+* Authentication, workflow validations, form testing.
+* UI checks and data rule testing.
+
+## Cloth Shop
+
+* Product browsing, filtering, cart logic, checkout workflow.
+* Validations and negative scenario coverage.
+
+## PHPTravels
+
+* Customer booking journey testing.
+* Search and booking workflows.
+* UI checks and validation rules.
+
+---
+
+# Tools Used
+
+### Manual Testing
+
+* Test case design (BVA, ECP, Decision Tables, Use Cases)
+* Exploratory testing
+* Negative scenario design
+
+### Katalon Studio
+
+* Web UI test automation
+* Recording, object repository management
+* Assertions and report exports
+
+---
+
+# How to Navigate This Repository
+
+* Every folder contains a dedicated `TestCases.md` or equivalent.
+* Files follow a consistent format:
+
+  * Test Case ID
+  * Test Scenario
+  * Preconditions
+  * Steps
+  * Expected Result
+  * Notes / Screenshots (if required)
+* Some projects include additional subfolders like screenshots or workflows.
+
+---
+
+# Unique Highlights
+
+* Over **150+ test cases** created across projects.
+* Covers a mix of small apps, enterprise demos, and eCommerce platforms.
+* Designed using real QA techniques: BVA, ECP, functional decomposition, and scenario mapping.
+* Mix of **manual** and **Katalon** automation.
+* Consistent formatting across all projects.
+* Focus on thoroughness rather than minimal coverage.
+
+---
+
+# Future Roadmap
+
+* Add Selenium WebDriver automation for major projects.
+* Expand negative scenarios and integration test cases.
+* Add CI/CD integration for automated test runs.
+* Convert selected manual test suites into automated flows.
+
+---
+
+# Notes for Recruiters
+
+* This repository reflects my practical approach to testing.
+* I focus on clarity, strong coverage, and real-world user paths.
+* Every project here is built independently as a learning and skill-building exercise.
+* If you'd like to walk through any project during an interview, I'm happy to.
+
+---
+
+# About the Author
+
+Hi, I'm **Mohammed Saqib**. I’m on a path toward becoming a strong SDET with solid foundations in manual testing, automation, and software quality principles.
+
+I enjoy exploring different applications, breaking them, understanding edge cases, and designing clean, structured test suites. This repository documents that journey.
+
+If you'd like to connect or collaborate, feel free to reach out!
