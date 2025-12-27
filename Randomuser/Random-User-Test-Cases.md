@@ -1,4 +1,4 @@
-# RandomUser.me – Test Cases (Corrected & Readable Container)
+# RandomUser.me - Test Cases (Corrected & Readable Container)
 
 Target Application: RandomUser.me
 
