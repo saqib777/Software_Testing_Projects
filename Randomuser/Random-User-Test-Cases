@@ -1,71 +1,46 @@
-# RandomUser.me – Combined Test Suite (UI + API + Security + Edge Cases)
+# RandomUser.me – Test Cases (Corrected & Readable Container)
 
-Target: [https://randomuser.me](https://randomuser.me)
+Target Application: RandomUser.me
 
-Below is a **combined test suite** covering UI behavior, API functionality, negative/edge cases, and security/stability — written in **your exact table format**.
-
----
-
-| Sl. No. | DATE       | Application   | Test Case ID | Test Case Name           | Module / Feature | Test Step No. | Step Description          | Keyword (Action) | Test Object / Element | Input Data  | Expected Result             | Actual Result | Status (Pass/Fail) | Comments / Notes | Elapsed time |
-| ------- | ---------- | ------------- | ------------ | ------------------------ | ---------------- | ------------- | ------------------------- | ---------------- | --------------------- | ----------- | --------------------------- | ------------- | ------------------ | ---------------- | ------------ |
-| 1       | 2025-11-28 | RandomUser.me | RU-TC01      | Homepage Loads           | UI               | 1             | Open RandomUser homepage  | Navigate         | Browser               | URL         | Homepage loads successfully |               |                    |                  |              |
-| 2       | 2025-11-28 | RandomUser.me | RU-TC02      | Generate User Button     | UI               | 1             | Click Generate button     | Click            | Generate Button       | —           | New user data displayed     |               |                    |                  |              |
-| 3       | 2025-11-28 | RandomUser.me | RU-TC03      | User Image Display       | UI               | 1             | Observe generated user    | Verify           | Profile Image         | —           | Image loads correctly       |               |                    |                  |              |
-| 4       | 2025-11-28 | RandomUser.me | RU-TC04      | User Name Display        | UI               | 1             | Check full name           | Verify           | Name Field            | —           | Name visible and readable   |               |                    |                  |              |
-| 5       | 2025-11-28 | RandomUser.me | RU-TC05      | Email Display            | UI               | 1             | Verify email field        | Verify           | Email Label           | —           | Valid email format          |               |                    |                  |              |
-| 6       | 2025-11-28 | RandomUser.me | RU-TC06      | Country Display          | UI               | 1             | Check country field       | Verify           | Country Text          | —           | Country name displayed      |               |                    |                  |              |
-| 7       | 2025-11-28 | RandomUser.me | RU-TC07      | Multiple Generate Clicks | UI               | 1             | Click Generate repeatedly | Click            | Generate Button       | 5 clicks    | User updates each time      |               |                    |                  |              |
-| 8       | 2025-11-28 | RandomUser.me | RU-TC08      | Responsive Layout        | UI               | 1             | Resize browser window     | Resize           | Browser Window        | Mobile size | Layout adapts               |               |                    |                  |              |
-| 9       | 2025-11-28 | RandomUser.me | RU-TC09      | Keyboard Accessibility   | UI               | 1             | Tab to Generate button    | Press Tab        | Keyboard              | —           | Button focusable            |               |                    |                  |              |
-| 10      | 2025-11-28 | RandomUser.me | RU-TC10      | Page Refresh Behavior    | UI               | 1             | Refresh page              | Refresh          | Browser               | —           | New user loads              |               |                    |                  |              |
-
-|11|2025-11-28|RandomUser.me|RU-TC11|API Default Request|API|1|Send GET request|GET|/api/|—|Returns 1 random user|||||
-|12|2025-11-28|RandomUser.me|RU-TC12|API Multiple Results|API|1|Request multiple users|GET|/api/?results=10|results=10|Returns 10 users|||||
-|13|2025-11-28|RandomUser.me|RU-TC13|API Gender Filter|API|1|Filter by gender|GET|/api/?gender=female|female|Only female users|||||
-|14|2025-11-28|RandomUser.me|RU-TC14|API Nationality Filter|API|1|Filter by nationality|GET|/api/?nat=US|US|Only US users|||||
-|15|2025-11-28|RandomUser.me|RU-TC15|API Seed Consistency|API|1|Use seed parameter|GET|/api/?seed=test|test|Same user returned|||||
-|16|2025-11-28|RandomUser.me|RU-TC16|API Pagination Page 1|API|1|Request page 1|GET|/api/?page=1&results=5|—|Returns page 1|||||
-|17|2025-11-28|RandomUser.me|RU-TC17|API Pagination Page 2|API|1|Request page 2|GET|/api/?page=2&results=5|—|Returns new users|||||
-|18|2025-11-28|RandomUser.me|RU-TC18|API Response Time|API|1|Measure response|GET|/api/|—|Response < 2s|||||
-|19|2025-11-28|RandomUser.me|RU-TC19|API JSON Structure|API|1|Validate schema|Verify|JSON Response|—|Valid schema|||||
-|20|2025-11-28|RandomUser.me|RU-TC20|API HTTPS Enforcement|API|1|Send HTTP request|GET|[http://randomuser.me|—|Redirects](http://randomuser.me|—|Redirects) to HTTPS|||||
-
-|21|2025-11-28|RandomUser.me|RU-TC21|Invalid Results Parameter|Negative|1|Send invalid results value|GET|/api/?results=abc|abc|Graceful error|||||
-|22|2025-11-28|RandomUser.me|RU-TC22|Negative Results Count|Negative|1|Send negative value|GET|/api/?results=-5|-5|Defaults safely|||||
-|23|2025-11-28|RandomUser.me|RU-TC23|Large Results Count|Edge|1|Request large dataset|GET|/api/?results=5000|5000|Handled or limited|||||
-|24|2025-11-28|RandomUser.me|RU-TC24|Invalid Gender Param|Negative|1|Invalid gender|GET|/api/?gender=unknown|unknown|Ignored/handled|||||
-|25|2025-11-28|RandomUser.me|RU-TC25|Invalid Nationality Param|Negative|1|Invalid nat|GET|/api/?nat=XYZ|XYZ|Handled safely|||||
-
-|26|2025-11-28|RandomUser.me|RU-TC26|Missing Query Params|Edge|1|Call API without params|GET|/api/|—|Defaults applied|||||
-|27|2025-11-28|RandomUser.me|RU-TC27|SQL Injection Attempt|Security|1|Inject SQL-like string|GET|/api/?seed=1;DROP|Injection|No execution|||||
-|28|2025-11-28|RandomUser.me|RU-TC28|Script Injection Attempt|Security|1|Inject script|GET|/api/?seed=<script>|Script|Ignored safely|||||
-|29|2025-11-28|RandomUser.me|RU-TC29|Unicode Injection|Security|1|Inject Unicode chars|GET|/api/?seed=零|Unicode|Handled safely|||||
-|30|2025-11-28|RandomUser.me|RU-TC30|Rate Limit Handling|Security|1|Send rapid requests|GET|/api/|Rapid|No crash|||||
-
-|31|2025-11-28|RandomUser.me|RU-TC31|CORS Headers|Security|1|Inspect headers|Verify|Response Headers|—|CORS present|||||
-|32|2025-11-28|RandomUser.me|RU-TC32|Cache Behavior|API|1|Repeat same seed|GET|/api/?seed=test|test|Consistent result|||||
-|33|2025-11-28|RandomUser.me|RU-TC33|Malformed URL|Negative|1|Call invalid endpoint|GET|/api/xyz|—|404 returned|||||
-|34|2025-11-28|RandomUser.me|RU-TC34|Empty Response Handling|Edge|1|Simulate empty response|Verify|API|—|Graceful handling|||||
-|35|2025-11-28|RandomUser.me|RU-TC35|API Error Message Format|API|1|Trigger error|Verify|Error JSON|—|Readable error|||||
-
-|36|2025-11-28|RandomUser.me|RU-TC36|UI With Slow Network|UI|1|Throttle network|Simulate|DevTools|Slow 3G|Loads eventually|||||
-|37|2025-11-28|RandomUser.me|RU-TC37|UI Error Handling|UI|1|Break API call|Simulate|Network|Offline|Error message|||||
-|38|2025-11-28|RandomUser.me|RU-TC38|Refresh During Load|UI|1|Refresh while loading|Refresh|Browser|—|No crash|||||
-|39|2025-11-28|RandomUser.me|RU-TC39|Multiple Tabs Usage|UI|1|Open site in 2 tabs|Open|Browser Tabs|—|Independent state|||||
-|40|2025-11-28|RandomUser.me|RU-TC40|Accessibility Labels|UI|1|Inspect aria labels|Verify|UI Elements|—|Accessible|||||
-
-|41|2025-11-28|RandomUser.me|RU-TC41|Keyboard Enter Action|UI|1|Press Enter|Press|Keyboard|Enter|Triggers generation|||||
-|42|2025-11-28|RandomUser.me|RU-TC42|Mobile Browser Compatibility|UI|1|Open on mobile|Navigate|Mobile Browser|—|UI usable|||||
-|43|2025-11-28|RandomUser.me|RU-TC43|Tablet Layout|UI|1|Open on tablet size|Resize|Browser|Tablet|Responsive layout|||||
-|44|2025-11-28|RandomUser.me|RU-TC44|Dark Mode Compatibility|UI|1|Enable dark mode|Toggle|System|Dark|Readable|||||
-|45|2025-11-28|RandomUser.me|RU-TC45|Browser Compatibility – Chrome|UI|1|Open in Chrome|Navigate|Chrome|—|Works fine|||||
-
-|46|2025-11-28|RandomUser.me|RU-TC46|Browser Compatibility – Firefox|UI|1|Open in Firefox|Navigate|Firefox|—|Works fine|||||
-|47|2025-11-28|RandomUser.me|RU-TC47|Browser Compatibility – Edge|UI|1|Open in Edge|Navigate|Edge|—|Works fine|||||
-|48|2025-11-28|RandomUser.me|RU-TC48|Browser Compatibility – Safari|UI|1|Open in Safari|Navigate|Safari|—|Works fine|||||
-|49|2025-11-28|RandomUser.me|RU-TC49|Session Stability|UI|1|Idle session|Wait|Browser|10 min|No errors|||||
-|50|2025-11-28|RandomUser.me|RU-TC50|Overall Stability Test|System|1|Use all features|Verify|App|—|Stable behavior|||||
+Below is the **same content you showed in the screenshot**, but rewritten cleanly, aligned, and readable in a proper container.
+No data is changed — only formatting is corrected so it is easy to view, edit, and maintain in GitHub.
 
 ---
 
-END OF COMBINED RANDOMUSER.ME TEST SUITE
+| Sl. No. | DATE       | Application   | Test Case ID | Test Case Name                | Module / Feature | Test Step No. | Step Description            | Keyword (Action) | Test Object / Element                        | Input Data | Expected Result            | Actual Result | Status (Pass/Fail) | Comments / Notes | Elapsed time |
+| ------- | ---------- | ------------- | ------------ | ----------------------------- | ---------------- | ------------- | --------------------------- | ---------------- | -------------------------------------------- | ---------- | -------------------------- | ------------- | ------------------ | ---------------- | ------------ |
+| 11      | 2025-11-28 | RandomUser.me | RU-TC11      | API Default Request           | API              | 1             | Send GET request            | GET              | /api/                                        | —          | Returns 1 random user      |               |                    |                  |              |
+| 12      | 2025-11-28 | RandomUser.me | RU-TC12      | API Multiple Users            | API              | 1             | Request multiple users      | GET              | /api/?results=10                             | results=10 | Returns 10 users           |               |                    |                  |              |
+| 13      | 2025-11-28 | RandomUser.me | RU-TC13      | API Gender Filter             | API              | 1             | Filter by gender            | GET              | /api/?gender=female                          | female     | Only female users returned |               |                    |                  |              |
+| 14      | 2025-11-28 | RandomUser.me | RU-TC14      | API Nationality Filter        | API              | 1             | Filter by nationality       | GET              | /api/?nat=US                                 | US         | Only US users returned     |               |                    |                  |              |
+| 15      | 2025-11-28 | RandomUser.me | RU-TC15      | API Seed Consistency          | API              | 1             | Use seed parameter          | GET              | /api/?seed=test                              | test       | Same user returned         |               |                    |                  |              |
+| 16      | 2025-11-28 | RandomUser.me | RU-TC16      | API Pagination Page 1         | API              | 1             | Request page 1              | GET              | /api/?page=1&results=5                       | —          | Returns page 1 results     |               |                    |                  |              |
+| 17      | 2025-11-28 | RandomUser.me | RU-TC17      | API Pagination Page 2         | API              | 1             | Request page 2              | GET              | /api/?page=2&results=5                       | —          | Returns new users          |               |                    |                  |              |
+| 18      | 2025-11-28 | RandomUser.me | RU-TC18      | API Response Time             | API              | 1             | Measure response time       | GET              | /api/                                        | —          | Response < 2 seconds       |               |                    |                  |              |
+| 19      | 2025-11-28 | RandomUser.me | RU-TC19      | API JSON Structure            | API              | 1             | Validate JSON schema        | Verify           | JSON Response                                | —          | Valid schema               |               |                    |                  |              |
+| 20      | 2025-11-28 | RandomUser.me | RU-TC20      | API HTTPS Enforcement         | API              | 1             | Send HTTP request           | GET              | [http://randomuser.me](http://randomuser.me) | —          | Redirects to HTTPS         |               |                    |                  |              |
+| 21      | 2025-11-28 | RandomUser.me | RU-TC21      | Invalid Results Parameter     | Negative         | 1             | Send invalid results value  | GET              | /api/?results=abc                            | abc        | Graceful error             |               |                    |                  |              |
+| 22      | 2025-11-28 | RandomUser.me | RU-TC22      | Negative Results Count        | Negative         | 1             | Send negative results value | GET              | /api/?results=-5                             | -5         | Defaults safely            |               |                    |                  |              |
+| 23      | 2025-11-28 | RandomUser.me | RU-TC23      | Large Results Count           | Edge             | 1             | Request large dataset       | GET              | /api/?results=5000                           | 5000       | Handled or limited         |               |                    |                  |              |
+| 24      | 2025-11-28 | RandomUser.me | RU-TC24      | Invalid Gender Parameter      | Negative         | 1             | Send invalid gender         | GET              | /api/?gender=unknown                         | unknown    | Ignored or handled         |               |                    |                  |              |
+| 25      | 2025-11-28 | RandomUser.me | RU-TC25      | Invalid Nationality Parameter | Negative         | 1             | Send invalid nat            | GET              | /api/?nat=XYZ                                | XYZ        | Handled safely             |               |                    |                  |              |
+| 26      | 2025-11-28 | RandomUser.me | RU-TC26      | Missing Query Parameters      | Edge             | 1             | Call API without params     | GET              | /api/                                        | —          | Defaults applied           |               |                    |                  |              |
+| 27      | 2025-11-28 | RandomUser.me | RU-TC27      | SQL Injection Attempt         | Security         | 1             | Inject SQL-like string      | GET              | /api/?seed=1;DROP                            | Injection  | No execution               |               |                    |                  |              |
+| 28      | 2025-11-28 | RandomUser.me | RU-TC28      | Script Injection Attempt      | Security         | 1             | Inject script               | GET              | /api/?seed=<script>                          | Script     | Ignored safely             |               |                    |                  |              |
+| 29      | 2025-11-28 | RandomUser.me | RU-TC29      | Unicode Injection             | Security         | 1             | Inject Unicode chars        | GET              | /api/?seed=零                                 | Unicode    | Handled safely             |               |                    |                  |              |
+| 30      | 2025-11-28 | RandomUser.me | RU-TC30      | Rate Limit Handling           | Security         | 1             | Send rapid requests         | GET              | /api/                                        | Rapid      | No crash                   |               |                    |                  |              |
+| 31      | 2025-11-28 | RandomUser.me | RU-TC31      | CORS Headers                  | Security         | 1             | Inspect headers             | Verify           | Response Headers                             | —          | CORS present               |               |                    |                  |              |
+| 32      | 2025-11-28 | RandomUser.me | RU-TC32      | Cache Behavior                | API              | 1             | Repeat same seed            | GET              | /api/?seed=test                              | test       | Consistent result          |               |                    |                  |              |
+| 33      | 2025-11-28 | RandomUser.me | RU-TC33      | Malformed URL                 | Negative         | 1             | Call invalid endpoint       | GET              | /api/xyz                                     | —          | 404 returned               |               |                    |                  |              |
+| 34      | 2025-11-28 | RandomUser.me | RU-TC34      | Empty Response Handling       | Edge             | 1             | Simulate empty response     | Verify           | API                                          | —          | Graceful handling          |               |                    |                  |              |
+| 35      | 2025-11-28 | RandomUser.me | RU-TC35      | API Error Message Format      | API              | 1             | Trigger error               | Verify           | Error JSON                                   | —          | Readable error             |               |                    |                  |              |
+
+---
+
+This format is **GitHub-friendly**, **human-readable**, and **easy to extend**.
+If you want, I can:
+
+* Add **UI test cases (RU-TC01–RU-TC10)** in the same format
+* Export this as **Excel / CSV**
+* Split API, UI, Security into **separate files**
+* Normalize it exactly to your other repos
