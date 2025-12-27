@@ -1,1 +1,35 @@
-https://randomuser.me
+# RandomUser.me – Test Cases (Clean Retry – Part 1)
+
+Target: [https://randomuser.me](https://randomuser.me)
+
+This is a **clean re-creation** of the test cases so everything is clearly readable.
+I am deliberately keeping this structured, spaced, and simple.
+
+This document contains **Test Cases 1–15**.
+
+---
+
+| Sl. No. | DATE       | Application   | Test Case ID | Test Case Name              | Module / Feature | Test Step No. | Step Description                     | Keyword (Action) | Test Object / Element | Input Data                                     | Expected Result                   | Actual Result | Status (Pass/Fail) | Comments / Notes | Elapsed time |
+| ------- | ---------- | ------------- | ------------ | --------------------------- | ---------------- | ------------- | ------------------------------------ | ---------------- | --------------------- | ---------------------------------------------- | --------------------------------- | ------------- | ------------------ | ---------------- | ------------ |
+| 1       | 2025-11-28 | RandomUser.me | RU-TC-01     | Homepage Loads Successfully | UI               | 1             | Open RandomUser homepage URL         | Navigate         | Browser               | [https://randomuser.me](https://randomuser.me) | Homepage loads without errors     |               |                    |                  |              |
+| 2       | 2025-11-28 | RandomUser.me | RU-TC-02     | Generate User Button Works  | UI               | 1             | Click Generate button                | Click            | Generate Button       | —                                              | New random user data is displayed |               |                    |                  |              |
+| 3       | 2025-11-28 | RandomUser.me | RU-TC-03     | User Image Display          | UI               | 1             | Observe generated user image         | Verify           | Profile Image         | —                                              | User image loads correctly        |               |                    |                  |              |
+| 4       | 2025-11-28 | RandomUser.me | RU-TC-04     | User Name Display           | UI               | 1             | Verify full name field               | Verify           | Name Label            | —                                              | Full name is visible and readable |               |                    |                  |              |
+| 5       | 2025-11-28 | RandomUser.me | RU-TC-05     | Email Format Validation     | UI               | 1             | Verify email value                   | Verify           | Email Field           | —                                              | Valid email format displayed      |               |                    |                  |              |
+| 6       | 2025-11-28 | RandomUser.me | RU-TC-06     | Country Field Display       | UI               | 1             | Check country information            | Verify           | Country Label         | —                                              | Country name is displayed         |               |                    |                  |              |
+| 7       | 2025-11-28 | RandomUser.me | RU-TC-07     | Multiple Generate Clicks    | UI               | 1             | Click Generate button multiple times | Click            | Generate Button       | 5 clicks                                       | User data refreshes every time    |               |                    |                  |              |
+| 8       | 2025-11-28 | RandomUser.me | RU-TC-08     | Page Refresh Behavior       | UI               | 1             | Refresh browser page                 | Refresh          | Browser               | —                                              | New random user loads             |               |                    |                  |              |
+| 9       | 2025-11-28 | RandomUser.me | RU-TC-09     | Responsive Layout (Mobile)  | UI               | 1             | Resize browser to mobile view        | Resize           | Browser Window        | Mobile size                                    | Layout adjusts correctly          |               |                    |                  |              |
+| 10      | 2025-11-28 | RandomUser.me | RU-TC-10     | Keyboard Accessibility      | UI               | 1             | Navigate using keyboard              | Press Keys       | Keyboard              | Tab / Enter                                    | Generate button accessible        |               |                    |                  |              |
+| 11      | 2025-11-28 | RandomUser.me | RU-TC-11     | API Default Request         | API              | 1             | Send GET request                     | GET              | /api/                 | —                                              | API returns 1 random user         |               |                    |                  |              |
+| 12      | 2025-11-28 | RandomUser.me | RU-TC-12     | API Multiple Results        | API              | 1             | Request multiple users               | GET              | /api/?results=5       | results=5                                      | API returns 5 users               |               |                    |                  |              |
+| 13      | 2025-11-28 | RandomUser.me | RU-TC-13     | API Gender Filter           | API              | 1             | Filter by gender                     | GET              | /api/?gender=female   | female                                         | Only female users returned        |               |                    |                  |              |
+| 14      | 2025-11-28 | RandomUser.me | RU-TC-14     | API Nationality Filter      | API              | 1             | Filter by nationality                | GET              | /api/?nat=US          | US                                             | Only US users returned            |               |                    |                  |              |
+| 15      | 2025-11-28 | RandomUser.me | RU-TC-15     | API Seed Consistency        | API              | 1             | Use seed parameter                   | GET              | /api/?seed=test       | test                                           | Same user returned on repeat      |               |                    |                  |              |
+
+---
+
+END OF PART 1
+
+Next part will include **Negative, Edge, and Security tests (16–30)**.
+
