@@ -1,4 +1,4 @@
-# RandomUser.me – Test Cases (Next Test Set: UI Tests RU‑TC01 to RU‑TC10)
+# RandomUser.me – Test Cases 
 
 Target Application: [https://randomuser.me](https://randomuser.me)
 
@@ -19,6 +19,17 @@ Formatted cleanly in your exact table structure, readable on GitHub, and consist
 | 8       | 2025-11-28 | RandomUser.me | RU-TC08      | Page Refresh Generates New User | UI               | 1             | Refresh browser page              | Refresh          | Browser               | —                                              | New random user appears           |               |                    |                  |              |
 | 9       | 2025-11-28 | RandomUser.me | RU-TC09      | Responsive Layout (Mobile View) | UI               | 1             | Resize window to mobile width     | Resize           | Browser Window        | Mobile size                                    | Layout adapts correctly           |               |                    |                  |              |
 | 10      | 2025-11-28 | RandomUser.me | RU-TC10      | Keyboard Accessibility          | UI               | 1             | Navigate using Tab & Enter        | Press Keys       | Keyboard              | Tab / Enter                                    | Generate button usable            |               |                    |                  |              |
+| 11      | 2025-11-28 | RandomUser.me | RU-TC11      | API Default Request           | API              | 1             | Send GET request without parameters | GET              | /api/                                        | —          | Returns 1 random user     |               |                    |                  |              |
+| 12      | 2025-11-28 | RandomUser.me | RU-TC12      | API Multiple Results          | API              | 1             | Request multiple users              | GET              | /api/?results=10                             | results=10 | Returns 10 users          |               |                    |                  |              |
+| 13      | 2025-11-28 | RandomUser.me | RU-TC13      | Invalid Results Parameter     | Negative         | 1             | Send non-numeric results value      | GET              | /api/?results=abc                            | abc        | Graceful error or default |               |                    |                  |              |
+| 14      | 2025-11-28 | RandomUser.me | RU-TC14      | Negative Results Count        | Edge             | 1             | Send negative results value         | GET              | /api/?results=-5                             | -5         | Defaults safely           |               |                    |                  |              |
+| 15      | 2025-11-28 | RandomUser.me | RU-TC15      | Large Results Count           | Edge             | 1             | Request very large dataset          | GET              | /api/?results=5000                           | 5000       | Handled or limited        |               |                    |                  |              |
+| 16      | 2025-11-28 | RandomUser.me | RU-TC16      | Invalid Gender Parameter      | Negative         | 1             | Send invalid gender value           | GET              | /api/?gender=unknown                         | unknown    | Ignored or handled        |               |                    |                  |              |
+| 17      | 2025-11-28 | RandomUser.me | RU-TC17      | Invalid Nationality Parameter | Negative         | 1             | Send invalid nationality code       | GET              | /api/?nat=XYZ                                | XYZ        | Handled safely            |               |                    |                  |              |
+| 18      | 2025-11-28 | RandomUser.me | RU-TC18      | Missing Query Parameters      | Edge             | 1             | Call API with no query params       | GET              | /api/                                        | —          | Defaults applied          |               |                    |                  |              |
+| 19      | 2025-11-28 | RandomUser.me | RU-TC19      | API Response Time             | Performance      | 1             | Measure API response time           | GET              | /api/                                        | —          | Response < 2 seconds      |               |                    |                  |              |
+| 20      | 2025-11-28 | RandomUser.me | RU-TC20      | HTTPS Enforcement             | Security         | 1             | Send HTTP request                   | GET              | [http://randomuser.me](http://randomuser.me) | —          | Redirects to HTTPS        |               |                    |                  |              |
 
 ---
+
 
