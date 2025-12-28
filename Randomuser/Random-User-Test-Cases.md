@@ -1,4 +1,4 @@
-# RandomUser.me – Test Cases 
+# RandomUser.me - Test Cases 
 
 Target Application: [https://randomuser.me](https://randomuser.me)
 
