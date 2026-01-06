@@ -1,4 +1,4 @@
-# Printer Testing – Scenario 2.1: Physical Controls & Button Behavior
+# Printer Testing - Scenario 2.1: Physical Controls & Button Behavior
 
 Scenario Focus: **Behavior of physical buttons during normal conditions**
 
